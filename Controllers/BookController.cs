@@ -3,22 +3,16 @@ using AutoMapper.QueryableExtensions;
 using Book_Keep.Helpers;
 using Book_Keep.Models;
 using ClosedXML.Excel;
-using DocumentFormat.OpenXml.Spreadsheet;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Book_Keep.Controllers
 {
-    [Route("api/")]
-    [ApiController]
-    public class BookController : ControllerBase
+    public class BookController : BaseApiController
     {
-        private readonly AppDbContext _context;
-        private readonly IMapper _mapper;
-        public BookController(AppDbContext context, IMapper mapper)
+        public BookController(AppDbContext context, IMapper mapper) : base (context, mapper)
         {
-            _context = context;
-            _mapper = mapper;
+            
         }
 
         [HttpGet("books/export")]
