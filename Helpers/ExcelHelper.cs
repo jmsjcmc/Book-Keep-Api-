@@ -1,4 +1,5 @@
-﻿using ClosedXML.Excel;
+﻿using Book_Keep.Models.Book;
+using ClosedXML.Excel;
 
 namespace Book_Keep.Helpers
 {
@@ -43,6 +44,54 @@ namespace Book_Keep.Helpers
 
             save();
             return getbytes();
+        }
+
+        public byte[] exportbooks(IEnumerable<Book> books)
+        {
+            var worksheet = createworksheet("Books");
+            int row = 2;
+            for (int i = 0; i < bookHeader.Length; i++)
+            {
+                worksheet.Cell(1, i + 1).Value = bookHeader[i];
+                worksheet.Cell(1, i + 1).Style.Font.Bold = true;
+            }
+
+            foreach (var book in books)
+            {
+                var values = new object[]
+                {
+                    book.Title, book.Isbn, book.Author, book.Publisher,
+                    book.PublicationDate, book.Edition, book.Language
+                };
+                for (int col = 0; col < values.Length; col++)
+                    worksheet.Cell(row, col + 1).Value = values[col]?.ToString();
+                row++;
+            }
+            worksheet.Columns().AdjustToContents();
+            save();
+            return getbytes();
+        }
+
+        public List<Book> importbooks (IFormFile file)
+        {
+            var books = new List<Book>();
+            var rows = getworksheetrows(file);
+
+            foreach (var row in rows)
+            {
+                books.Add(new Book
+                {
+                    Title = row.Cell(1).GetValue<string>(),
+                    Isbn = row.Cell(2).GetValue<string>(),
+                    Author = row.Cell(3).GetValue<string>(),
+                    Publisher = row.Cell(4).GetValue<string>(),
+                    PublicationDate = row.Cell(5).GetValue<string>(),
+                    Edition = row.Cell(6).GetValue<string>(),
+                    Language = row.Cell(7).GetValue<string>(),
+
+                });
+            }
+            return books;
         }
 
         private IXLWorksheet createworksheet(string sheetname)

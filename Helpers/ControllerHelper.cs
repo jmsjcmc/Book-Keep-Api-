@@ -7,8 +7,8 @@ namespace Book_Keep.Helpers
     [ApiController]
     public abstract class BaseApiController : ControllerBase
     {
-        private readonly AppDbContext _context;
-        private readonly IMapper _mapper;
+        protected readonly AppDbContext _context;
+        protected readonly IMapper _mapper;
 
         protected BaseApiController(AppDbContext context, IMapper mapper)
         {

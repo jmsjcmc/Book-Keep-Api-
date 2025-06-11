@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Book_Keep.Models;
+using Book_Keep.Models.Book;
 
 namespace Book_Keep.Helpers
 {
