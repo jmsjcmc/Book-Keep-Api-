@@ -11,7 +11,6 @@
         public string Edition { get; set; }
         public string Language { get; set; }
         public bool Removed { get; set; }
-        public int MyProperty { get; set; }
         public DateTime AddedOn { get; set; }
     }
 }
