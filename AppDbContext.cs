@@ -1,4 +1,5 @@
 ﻿using Book_Keep.Models.Book;
+using Book_Keep.Models.User;
 using Microsoft.EntityFrameworkCore;
 
 namespace Book_Keep
@@ -10,10 +11,19 @@ namespace Book_Keep
 
         }
         public DbSet<Book> Book { get; set; }
+        public DbSet<User> User { get; set; }
+        public DbSet<Department> Department { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<User>(d =>
+            {
+                d.HasOne(u => u.Department)
+                .WithMany(u => u.User)
+                .HasForeignKey(u => u.Departmentid);
+            });
         }
     }
 }

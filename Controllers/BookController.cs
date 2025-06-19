@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using AutoMapper.QueryableExtensions;
 using Book_Keep.Helpers;
 using Book_Keep.Models;
 using Book_Keep.Models.Book;
@@ -18,7 +17,7 @@ namespace Book_Keep.Controllers
             _excelHelper = excelHelper;
             _bookService = bookService;
         }
-
+        // Export books
         [HttpGet("books/export")]
         public async Task<ActionResult> exportBooks()
         {
@@ -29,14 +28,13 @@ namespace Book_Keep.Controllers
 
                 var file = _excelHelper.exportbooks(books);
                 return File(file, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Books.xlsx");
-
             }
             catch (Exception e)
             {
                 return HandleException(e);
             }
         }
-
+        // Generate book template
         [HttpGet("books/template")]
         public async Task<ActionResult> template()
         {
@@ -50,7 +48,7 @@ namespace Book_Keep.Controllers
                 return HandleException(e);
             }
         }
-
+        // Fetch all books (paginated)
         [HttpGet("books")]
         public async Task<ActionResult<Pagination<BookResponse>>> getBooks(
             [FromQuery] int pageNumber = 1,
@@ -67,7 +65,7 @@ namespace Book_Keep.Controllers
                 return HandleException(e);
             }
         }
-
+        // Import all books
         [HttpPost("books/import")]
         public async Task<ActionResult> importBooks(IFormFile file)
         {
@@ -84,11 +82,10 @@ namespace Book_Keep.Controllers
                 return HandleException(e);
             }
         }
-
+        // Create book
         [HttpPost("book")]
         public async Task<ActionResult<BookResponse>> createBook([FromBody] BookRequest request)
         {
-           
             try
             {
                 var response = await _bookService.createbook(request);
@@ -99,8 +96,21 @@ namespace Book_Keep.Controllers
                 return HandleException(e);
             }
         }
-
-        [HttpPatch("{id}")]
+        // Update specific book
+        [HttpPatch("book/update/{id}")]
+        public async Task<ActionResult<BookResponse>> updatebook([FromBody] BookRequest request, int id)
+        {
+            try
+            {
+                var response = await _bookService.updatebook(request, id);
+                return response;
+            } catch (Exception e)
+            {
+                return HandleException(e);
+            }
+        }
+        // Hide specific book without removing in Database
+        [HttpPatch("book/hide/{id}")]
         public async Task<ActionResult<BookResponse>> toggleHidden(int id)
         {
             try
@@ -108,6 +118,19 @@ namespace Book_Keep.Controllers
                 var response = await _bookService.togglehide(id);
                 return response;
             }catch (Exception e)
+            {
+                return HandleException(e);
+            }
+        }
+        // Delete specific book in database
+        [HttpDelete("book/delete/{id}")]
+        public async Task<ActionResult> deletebook(int id)
+        {
+            try
+            {
+                await _bookService.deletebook(id);
+                return Ok($"Book with id {id} removed permanently.");
+            } catch (Exception e)
             {
                 return HandleException(e);
             }
