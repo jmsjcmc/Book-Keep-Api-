@@ -13,7 +13,7 @@ namespace Book_Keep.Interfaces
         Task<UserResponse> getuser(int id);
         Task<UserResponse> createuser([FromBody] UserRequest request);
         Task<UserResponse> updateuser([FromBody] UserRequest request, int id);
-        Task<UserResponse> hideuser(int id);
+        Task hideuser(int id);
         Task deleteuser(int id);
     }
 }
