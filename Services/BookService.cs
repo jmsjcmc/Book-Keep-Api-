@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Book_Keep.Services
 {
-    public class BookService : BaseApiController, IBookService
+    public class BookService : BaseService, IBookService
     {
         private readonly BookQueries _query;
         public BookService(AppDbContext context, IMapper mapper, BookQueries query) : base(context, mapper)

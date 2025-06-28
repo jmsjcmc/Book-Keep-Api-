@@ -4616,11 +4616,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Book Keep.csproj",
+      "projectUniqueName": "C:\\Users\\jatabilog\\Source\\Repos\\Book-Keep-Api-\\Book Keep.csproj",
       "projectName": "Book Keep",
-      "projectPath": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Book Keep.csproj",
+      "projectPath": "C:\\Users\\jatabilog\\Source\\Repos\\Book-Keep-Api-\\Book Keep.csproj",
       "packagesPath": "C:\\Users\\jatabilog\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\obj\\",
+      "outputPath": "C:\\Users\\jatabilog\\Source\\Repos\\Book-Keep-Api-\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4635,6 +4635,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

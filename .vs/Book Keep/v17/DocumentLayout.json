@@ -1,66 +1,74 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\",
+  "WorkspaceRootPath": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\desktop\\new folder (2)\\validators\\uservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:validators\\uservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\source\\repos\\book-keep-api-\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\desktop\\new folder (2)\\book keep.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:book keep.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\source\\repos\\book-keep-api-\\helpers\\automapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:helpers\\automapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\desktop\\new folder (2)\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\desktop\\new folder (2)\\helpers\\authenticationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\source\\repos\\book-keep-api-\\helpers\\authenticationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:helpers\\authenticationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\desktop\\new folder (2)\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\desktop\\new folder (2)\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\desktop\\new folder (2)\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\desktop\\new folder (2)\\helpers\\timehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:helpers\\timehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\desktop\\new folder (2)\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\desktop\\new folder (2)\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\source\\repos\\book-keep-api-\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\desktop\\new folder (2)\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\source\\repos\\book-keep-api-\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\source\\repos\\book-keep-api-\\helpers\\controllerhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:helpers\\controllerhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\source\\repos\\book-keep-api-\\validators\\uservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:validators\\uservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\source\\repos\\book-keep-api-\\book keep.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:book keep.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\source\\repos\\book-keep-api-\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\source\\repos\\book-keep-api-\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\source\\repos\\book-keep-api-\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\source\\repos\\book-keep-api-\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\source\\repos\\book-keep-api-\\helpers\\timehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:helpers\\timehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\source\\repos\\book-keep-api-\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\desktop\\new folder (2)\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\source\\repos\\book-keep-api-\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\desktop\\new folder (2)\\helpers\\queries\\userqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\source\\repos\\book-keep-api-\\helpers\\queries\\userqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:helpers\\queries\\userqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\desktop\\new folder (2)\\helpers\\queries\\bookqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\source\\repos\\book-keep-api-\\helpers\\queries\\bookqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:helpers\\queries\\bookqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\jatabilog\\desktop\\new folder (2)\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,175 +78,177 @@
       "DocumentGroups": [
         {
           "DockedWidth": 319,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "AutoMapper.cs",
+              "DocumentMoniker": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Helpers\\AutoMapper.cs",
+              "RelativeDocumentMoniker": "Helpers\\AutoMapper.cs",
+              "ToolTip": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Helpers\\AutoMapper.cs",
+              "RelativeToolTip": "Helpers\\AutoMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T04:01:47.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "UserValidator.cs",
-              "DocumentMoniker": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Validators\\UserValidator.cs",
+              "DocumentMoniker": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Validators\\UserValidator.cs",
               "RelativeDocumentMoniker": "Validators\\UserValidator.cs",
-              "ToolTip": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Validators\\UserValidator.cs",
+              "ToolTip": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Validators\\UserValidator.cs",
               "RelativeToolTip": "Validators\\UserValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T02:00:10.816Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Book Keep",
-              "DocumentMoniker": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Book Keep.csproj",
-              "RelativeDocumentMoniker": "Book Keep.csproj",
-              "ToolTip": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Book Keep.csproj",
-              "RelativeToolTip": "Book Keep.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-20T01:59:45.764Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "BookController.cs",
-              "DocumentMoniker": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Controllers\\BookController.cs",
+              "DocumentMoniker": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Controllers\\BookController.cs",
               "RelativeDocumentMoniker": "Controllers\\BookController.cs",
-              "ToolTip": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Controllers\\BookController.cs",
+              "ToolTip": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Controllers\\BookController.cs",
               "RelativeToolTip": "Controllers\\BookController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:59:44.374Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T01:59:44.374Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "IBookService.cs",
-              "DocumentMoniker": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Interfaces\\IBookService.cs",
+              "DocumentMoniker": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Interfaces\\IBookService.cs",
               "RelativeDocumentMoniker": "Interfaces\\IBookService.cs",
-              "ToolTip": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Interfaces\\IBookService.cs",
+              "ToolTip": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Interfaces\\IBookService.cs",
               "RelativeToolTip": "Interfaces\\IBookService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:59:00.44Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T01:59:00.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T01:58:58.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TimeHelper.cs",
+              "DocumentMoniker": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Helpers\\TimeHelper.cs",
+              "RelativeDocumentMoniker": "Helpers\\TimeHelper.cs",
+              "ToolTip": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Helpers\\TimeHelper.cs",
+              "RelativeToolTip": "Helpers\\TimeHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T01:55:58.826Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IUserService.cs",
-              "ToolTip": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "Interfaces\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:58:58.838Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TimeHelper.cs",
-              "DocumentMoniker": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Helpers\\TimeHelper.cs",
-              "RelativeDocumentMoniker": "Helpers\\TimeHelper.cs",
-              "ToolTip": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Helpers\\TimeHelper.cs",
-              "RelativeToolTip": "Helpers\\TimeHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:55:58.826Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "BookService.cs",
-              "DocumentMoniker": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Services\\BookService.cs",
+              "DocumentMoniker": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Services\\BookService.cs",
               "RelativeDocumentMoniker": "Services\\BookService.cs",
-              "ToolTip": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Services\\BookService.cs",
+              "ToolTip": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Services\\BookService.cs",
               "RelativeToolTip": "Services\\BookService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T01:55:56.756Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\AppDbContext.cs",
               "RelativeDocumentMoniker": "AppDbContext.cs",
-              "ToolTip": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\AppDbContext.cs",
               "RelativeToolTip": "AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:55:43.55Z",
+              "WhenOpened": "2025-06-20T01:55:43.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "Extensions\\ServiceCollectionExtensions.cs",
+              "ToolTip": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "Extensions\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwBEAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T01:54:33.253Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
+              "Title": "ControllerHelper.cs",
+              "DocumentMoniker": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Helpers\\ControllerHelper.cs",
+              "RelativeDocumentMoniker": "Helpers\\ControllerHelper.cs",
+              "ToolTip": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Helpers\\ControllerHelper.cs",
+              "RelativeToolTip": "Helpers\\ControllerHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T03:59:55.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Program.cs",
+              "ToolTip": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:55:42.703Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T01:55:42.703Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Services\\UserService.cs",
+              "DocumentMoniker": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Services\\UserService.cs",
               "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T01:55:38.391Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Controllers\\UserController.cs",
+              "DocumentMoniker": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAowC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:55:35.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T01:55:35.745Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserQueries.cs",
-              "DocumentMoniker": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Helpers\\Queries\\UserQueries.cs",
-              "RelativeDocumentMoniker": "Helpers\\Queries\\UserQueries.cs",
-              "ToolTip": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Helpers\\Queries\\UserQueries.cs",
-              "RelativeToolTip": "Helpers\\Queries\\UserQueries.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:55:07.095Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "AuthenticationHelper.cs",
-              "DocumentMoniker": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Helpers\\AuthenticationHelper.cs",
+              "DocumentMoniker": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Helpers\\AuthenticationHelper.cs",
               "RelativeDocumentMoniker": "Helpers\\AuthenticationHelper.cs",
-              "ToolTip": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Helpers\\AuthenticationHelper.cs",
+              "ToolTip": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Helpers\\AuthenticationHelper.cs",
               "RelativeToolTip": "Helpers\\AuthenticationHelper.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -247,29 +257,49 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "BookQueries.cs",
-              "DocumentMoniker": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Helpers\\Queries\\BookQueries.cs",
-              "RelativeDocumentMoniker": "Helpers\\Queries\\BookQueries.cs",
-              "ToolTip": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Helpers\\Queries\\BookQueries.cs",
-              "RelativeToolTip": "Helpers\\Queries\\BookQueries.cs",
+              "DocumentIndex": 7,
+              "Title": "Book Keep.csproj",
+              "DocumentMoniker": "C:\\Users\\jatabilog\\Source\\Repos\\Book-Keep-Api-\\Book Keep.csproj",
+              "RelativeDocumentMoniker": "Book Keep.csproj",
+              "ToolTip": "C:\\Users\\jatabilog\\Source\\Repos\\Book-Keep-Api-\\Book Keep.csproj",
+              "RelativeToolTip": "Book Keep.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:55:33.953Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-20T01:59:45.764Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ServiceCollectionExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Extensions\\ServiceCollectionExtensions.cs",
-              "RelativeDocumentMoniker": "Extensions\\ServiceCollectionExtensions.cs",
-              "ToolTip": "C:\\Users\\jatabilog\\Desktop\\New folder (2)\\Extensions\\ServiceCollectionExtensions.cs",
-              "RelativeToolTip": "Extensions\\ServiceCollectionExtensions.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAA2AAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "UserQueries.cs",
+              "DocumentMoniker": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Helpers\\Queries\\UserQueries.cs",
+              "RelativeDocumentMoniker": "Helpers\\Queries\\UserQueries.cs",
+              "ToolTip": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Helpers\\Queries\\UserQueries.cs",
+              "RelativeToolTip": "Helpers\\Queries\\UserQueries.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:54:33.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T01:55:07.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BookQueries.cs",
+              "DocumentMoniker": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Helpers\\Queries\\BookQueries.cs",
+              "RelativeDocumentMoniker": "Helpers\\Queries\\BookQueries.cs",
+              "ToolTip": "C:\\Users\\jatabilog\\source\\repos\\Book-Keep-Api-\\Helpers\\Queries\\BookQueries.cs",
+              "RelativeToolTip": "Helpers\\Queries\\BookQueries.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T01:55:33.953Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         }

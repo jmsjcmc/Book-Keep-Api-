@@ -1,21 +1,73 @@
 [
   {
-    "ContainingType": "Book_Keep.Controllers.BookController",
-    "Method": "toggleHidden",
-    "RelativePath": "api/{id}",
-    "HttpMethod": "PATCH",
+    "ContainingType": "Book_Keep.Helpers.Queries.UserQueries",
+    "Method": "filteredusers",
+    "RelativePath": "",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchTerm",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Linq.IQueryable\u00601[[Book_Keep.Models.User.User, Book Keep, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Book_Keep.Helpers.Queries.UserQueries",
+    "Method": "getmethoduserid",
+    "RelativePath": "",
+    "HttpMethod": "",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Book_Keep.Models.BookResponse",
+        "Type": "Book_Keep.Models.User.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Book_Keep.Helpers.Queries.UserQueries",
+    "Method": "patchmethoduserid",
+    "RelativePath": "",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Book_Keep.Models.User.User",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -28,20 +80,93 @@
   {
     "ContainingType": "Book_Keep.Controllers.BookController",
     "Method": "createBook",
-    "RelativePath": "api/book",
+    "RelativePath": "book",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Book_Keep.Models.BookRequest",
+        "Type": "Book_Keep.Models.Book.BookRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Book_Keep.Models.BookResponse",
+        "Type": "Book_Keep.Models.Book.BookResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Book_Keep.Controllers.BookController",
+    "Method": "deletebook",
+    "RelativePath": "book/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Book_Keep.Controllers.BookController",
+    "Method": "toggleHidden",
+    "RelativePath": "book/hide/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Book_Keep.Models.Book.BookResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Book_Keep.Controllers.BookController",
+    "Method": "updatebook",
+    "RelativePath": "book/update/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Book_Keep.Models.Book.BookRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Book_Keep.Models.Book.BookResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -54,7 +179,7 @@
   {
     "ContainingType": "Book_Keep.Controllers.BookController",
     "Method": "getBooks",
-    "RelativePath": "api/books",
+    "RelativePath": "books",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -68,11 +193,16 @@
         "Name": "pageSize",
         "Type": "System.Int32",
         "IsRequired": false
+      },
+      {
+        "Name": "searchTerm",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Book_Keep.Models.Pagination\u00601[[Book_Keep.Models.BookResponse, Book Keep, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Book_Keep.Models.Pagination\u00601[[Book_Keep.Models.Book.BookResponse, Book Keep, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -85,7 +215,7 @@
   {
     "ContainingType": "Book_Keep.Controllers.BookController",
     "Method": "exportBooks",
-    "RelativePath": "api/books/export",
+    "RelativePath": "books/export",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -95,7 +225,7 @@
   {
     "ContainingType": "Book_Keep.Controllers.BookController",
     "Method": "importBooks",
-    "RelativePath": "api/books/import",
+    "RelativePath": "books/import",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -111,11 +241,162 @@
   {
     "ContainingType": "Book_Keep.Controllers.BookController",
     "Method": "template",
-    "RelativePath": "api/books/template",
+    "RelativePath": "books/template",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Book_Keep.Controllers.UserController",
+    "Method": "createuser",
+    "RelativePath": "user",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Book_Keep.Models.User.UserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Book_Keep.Models.User.UserResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Book_Keep.Controllers.UserController",
+    "Method": "specificuser",
+    "RelativePath": "user/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Book_Keep.Models.User.UserResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Book_Keep.Controllers.UserController",
+    "Method": "deleteuser",
+    "RelativePath": "user/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Book_Keep.Controllers.UserController",
+    "Method": "hideuser",
+    "RelativePath": "user/hide/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Book_Keep.Controllers.UserController",
+    "Method": "updateuser",
+    "RelativePath": "user/update/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Book_Keep.Models.User.UserRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Book_Keep.Models.User.UserResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Book_Keep.Controllers.UserController",
+    "Method": "allusers",
+    "RelativePath": "users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "searchTerm",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Book_Keep.Models.Pagination\u00601[[Book_Keep.Models.User.UserResponse, Book Keep, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

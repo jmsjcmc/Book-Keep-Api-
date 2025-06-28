@@ -9,16 +9,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Book_Keep.Services
 {
-    public class UserService : IUserService
+    public class UserService : BaseService, IUserService
     {
         private readonly UserQueries _query;
-        private readonly AppDbContext _context;
-        private readonly IMapper _mapper;
-        public UserService(UserQueries query, AppDbContext context, IMapper mapper)
+        public UserService(UserQueries query, AppDbContext context, IMapper mapper) : base (context, mapper)
         {
             _query = query;
-            _context = context;
-            _mapper = mapper;
         }
         // [HttpGet("users")]
         public async Task<Pagination<UserResponse>> paginatedusers(
