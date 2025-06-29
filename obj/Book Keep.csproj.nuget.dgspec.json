@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Book Keep.csproj": {}
+    "C:\\Users\\James\\Source\\Repos\\Book-Keep-Api-\\Book Keep.csproj": {}
   },
   "projects": {
-    "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Book Keep.csproj": {
+    "C:\\Users\\James\\Source\\Repos\\Book-Keep-Api-\\Book Keep.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Book Keep.csproj",
+        "projectUniqueName": "C:\\Users\\James\\Source\\Repos\\Book-Keep-Api-\\Book Keep.csproj",
         "projectName": "Book Keep",
-        "projectPath": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Book Keep.csproj",
+        "projectPath": "C:\\Users\\James\\Source\\Repos\\Book-Keep-Api-\\Book Keep.csproj",
         "packagesPath": "C:\\Users\\James\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\obj\\",
+        "outputPath": "C:\\Users\\James\\Source\\Repos\\Book-Keep-Api-\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\James\\AppData\\Roaming\\NuGet\\NuGet.Config",

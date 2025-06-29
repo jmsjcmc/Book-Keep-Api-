@@ -56,7 +56,7 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _bookService.getbooks(pageNumber, pageSize, searchTerm);
+                var response = await _bookService.paginatedbooks(pageNumber, pageSize, searchTerm);
                 return response;
 
             }catch (Exception e)
@@ -123,12 +123,12 @@ namespace Book_Keep.Controllers
         }
         // Delete specific book in database
         [HttpDelete("book/delete/{id}")]
-        public async Task<ActionResult> deletebook(int id)
+        public async Task<ActionResult<BookResponse>> deletebook(int id)
         {
             try
             {
-                await _bookService.deletebook(id);
-                return Ok($"Book with id {id} removed permanently.");
+                var response = await _bookService.deletebook(id);
+                return response;
             } catch (Exception e)
             {
                 return HandleException(e);

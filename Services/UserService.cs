@@ -14,18 +14,14 @@ namespace Book_Keep.Services
         {
             _query = query;
         }
-        
+        // 
         public async Task<Pagination<UserWithDepartmentResponse>> paginatedusers(
             int pageNumber = 1,
             int pageSize = 10,
             string? searchTerm = null)
         {
             var query = _query.paginatedusers(searchTerm);
-            var totalCount = await query.CountAsync();
-            var users = await PaginationHelper.paginateandproject<User, UserWithDepartmentResponse>(
-                query, pageNumber, pageSize, _mapper);
-
-            return PaginationHelper.paginatedresponse(users, totalCount, pageNumber, pageSize);
+            return await PaginationHelper.paginateandmap<User, UserWithDepartmentResponse>(query, pageNumber, pageSize, _mapper);
         }
 
         public async Task<List<UserWithDepartmentResponse>> userslist(string? searchTerm = null)

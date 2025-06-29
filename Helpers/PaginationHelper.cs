@@ -34,5 +34,18 @@ namespace Book_Keep.Helpers
                 PageSize = pageSize
             };
         }
+
+        public static async Task<Pagination<TDestination>> paginateandmap<TSource, TDestination>(
+            IQueryable<TSource> query,
+            int pageNumber,
+            int pageSize,
+            IMapper mapper)
+        {
+            var totalCount = await query.CountAsync();
+            var items = await PaginationHelper.paginateandproject<TSource, TDestination>(
+                query, pageNumber, pageSize, mapper);
+
+            return PaginationHelper.paginatedresponse(items, totalCount, pageNumber, pageSize);
+        }
     }
 }

@@ -3,8 +3,7 @@ using Book_Keep.Helpers;
 using Book_Keep.Helpers.Queries;
 using Book_Keep.Interfaces;
 using Book_Keep.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+
 
 namespace Book_Keep.Services
 {
@@ -16,21 +15,16 @@ namespace Book_Keep.Services
             _query = query;
         }
         // [HttpGet("books")]
-        public async Task<Pagination<BookResponse>>getbooks(
+        public async Task<Pagination<BookResponse>> paginatedbooks(
             int pageNumber = 1,
             int pageSize = 10,
             string? searchTerm = null)
         {
             var query = _query.booksquery();
-            var totalCount = await query.CountAsync();
-
-            var books = await PaginationHelper.paginateandproject<Book, BookResponse>(
-                query, pageNumber, pageSize, _mapper);
-
-            return PaginationHelper.paginatedresponse(books, totalCount, pageNumber, pageSize);
+            return await PaginationHelper.paginateandmap<Book, BookResponse>(query, pageNumber, pageSize, _mapper);
         }
         // [HttpPost("book")]
-        public async Task<BookResponse> createbook([FromBody] BookRequest request)
+        public async Task<BookResponse> createbook(BookRequest request)
         {
             var book = _mapper.Map<Book>(request);
             book.AddedOn = TimeHelper.GetPhilippineStandardTime();
@@ -38,11 +32,10 @@ namespace Book_Keep.Services
             _context.Book.Add(book);
             await _context.SaveChangesAsync();
 
-            var savedBook = await _query.getmethodbookquery(book.Id);
-            return _mapper.Map<BookResponse>(savedBook);
+            return await bookResponse(book.Id);
         }
         // [HttpPatch("book/update/{id}")]
-        public async Task<BookResponse> updatebook([FromBody] BookRequest request, int id)
+        public async Task<BookResponse> updatebook(BookRequest request, int id)
         {
             var book = await _query.patchmethodbookquery(id);
 
@@ -50,7 +43,7 @@ namespace Book_Keep.Services
 
             await _context.SaveChangesAsync();
 
-            return _mapper.Map<BookResponse>(book);
+            return await bookResponse(book.Id);
         }
         // [HttpPatch("book/hide/{id}")]
         public async Task<BookResponse> togglehide(int id)
@@ -62,16 +55,32 @@ namespace Book_Keep.Services
             _context.Book.Update(book);
             await _context.SaveChangesAsync();
 
-            var updatedBook = await _query.getmethodbookquery(book.Id);
-            return _mapper.Map<BookResponse>(book);
+            return await bookResponse(book.Id);
         }
         // [HttpDelete("book/delete/{id}")]
-        public async Task deletebook (int id)
+        public async Task<BookResponse> deletebook (int id)
         {
             var book = await _query.patchmethodbookquery(id);
 
             _context.Book.Remove(book);
             await _context.SaveChangesAsync();
+
+            return await bookResponse(book.Id);
+        }
+        // Helpers
+        private async Task<Book?> getbookid(int id)
+        {
+            return await _query.getmethodbookquery(id);
+        }
+        private async Task<Book?> patchbookid(int id)
+        {
+            return await _query.patchmethodbookquery(id);
+        }
+        private async Task<BookResponse> bookResponse(int id)
+        {
+            var response = await getbookid(id);
+
+            return _mapper.Map<BookResponse>(response);
         }
     }
 }
