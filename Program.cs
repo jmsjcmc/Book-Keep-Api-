@@ -13,7 +13,7 @@ builder.Services.AddJwtAuthentication(builder.Configuration);
 builder.Services.AddCustomCORS();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerDocumentation();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 var app = builder.Build();
 

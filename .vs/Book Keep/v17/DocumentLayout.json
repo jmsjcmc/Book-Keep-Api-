@@ -3,104 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\helpers\\queries\\bookqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:helpers\\queries\\bookqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\helpers\\authenticationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:helpers\\authenticationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\helpers\\excelhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:helpers\\excelhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\helpers\\controllerhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:helpers\\controllerhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\models\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:models\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\helpers\\queries\\userqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:helpers\\queries\\userqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\helpers\\automapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:helpers\\automapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\models\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:models\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\models\\book\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:models\\book\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\models\\book\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:models\\book\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\models\\user\\departmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:models\\user\\departmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\models\\user\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:models\\user\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\validators\\uservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:validators\\uservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\book keep.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:book keep.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\helpers\\timehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:helpers\\timehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|c:\\users\\james\\source\\repos\\book-keep-api-\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1B6ADA-0817-4F45-9A3E-D3BCB187CE6D}|Book Keep.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -109,335 +17,48 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 319,
-          "SelectedChildIndex": 3,
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthenticationHelper.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Helpers\\AuthenticationHelper.cs",
-              "RelativeDocumentMoniker": "Helpers\\AuthenticationHelper.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Helpers\\AuthenticationHelper.cs",
-              "RelativeToolTip": "Helpers\\AuthenticationHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:46:44.546Z",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAD0BAAAAAAAAAAAIwGoBAAAPAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-06-29T04:19:08.799Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BookQueries.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Helpers\\Queries\\BookQueries.cs",
-              "RelativeDocumentMoniker": "Helpers\\Queries\\BookQueries.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Helpers\\Queries\\BookQueries.cs",
-              "RelativeToolTip": "Helpers\\Queries\\BookQueries.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:55:33.953Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IBookService.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Interfaces\\IBookService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IBookService.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Interfaces\\IBookService.cs",
-              "RelativeToolTip": "Interfaces\\IBookService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:59:00.44Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BookService.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Services\\BookService.cs",
-              "RelativeDocumentMoniker": "Services\\BookService.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Services\\BookService.cs",
-              "RelativeToolTip": "Services\\BookService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:55:56.756Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BookController.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Controllers\\BookController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BookController.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Controllers\\BookController.cs",
-              "RelativeToolTip": "Controllers\\BookController.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAjwEkAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:59:44.374Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ExcelHelper.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Helpers\\ExcelHelper.cs",
-              "RelativeDocumentMoniker": "Helpers\\ExcelHelper.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Helpers\\ExcelHelper.cs",
-              "RelativeToolTip": "Helpers\\ExcelHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T01:23:24.585Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAswGgAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T00:59:06.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ControllerHelper.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Helpers\\ControllerHelper.cs",
-              "RelativeDocumentMoniker": "Helpers\\ControllerHelper.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Helpers\\ControllerHelper.cs",
-              "RelativeToolTip": "Helpers\\ControllerHelper.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T03:59:55.544Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Services\\UserService.cs",
-              "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAuwDEAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T00:29:13.784Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "AppDbContext.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\AppDbContext.cs",
-              "RelativeToolTip": "AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:55:43.55Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Models\\User\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User\\User.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Models\\User\\User.cs",
-              "RelativeToolTip": "Models\\User\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T23:55:29.29Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserQueries.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Helpers\\Queries\\UserQueries.cs",
-              "RelativeDocumentMoniker": "Helpers\\Queries\\UserQueries.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Helpers\\Queries\\UserQueries.cs",
-              "RelativeToolTip": "Helpers\\Queries\\UserQueries.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAqwDUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T00:16:01.76Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IUserService.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "Interfaces\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T00:26:32.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "DepartmentDTO.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Models\\User\\DepartmentDTO.cs",
-              "RelativeDocumentMoniker": "Models\\User\\DepartmentDTO.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Models\\User\\DepartmentDTO.cs",
-              "RelativeToolTip": "Models\\User\\DepartmentDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T23:55:25.131Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AutoMapper.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Helpers\\AutoMapper.cs",
-              "RelativeDocumentMoniker": "Helpers\\AutoMapper.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Helpers\\AutoMapper.cs",
-              "RelativeToolTip": "Helpers\\AutoMapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T04:01:47.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Department.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Models\\User\\Department.cs",
-              "RelativeDocumentMoniker": "Models\\User\\Department.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Models\\User\\Department.cs",
-              "RelativeToolTip": "Models\\User\\Department.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T23:55:34.636Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "TimeHelper.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Helpers\\TimeHelper.cs",
-              "RelativeDocumentMoniker": "Helpers\\TimeHelper.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Helpers\\TimeHelper.cs",
-              "RelativeToolTip": "Helpers\\TimeHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:55:58.826Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:55:42.703Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ServiceCollectionExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Extensions\\ServiceCollectionExtensions.cs",
-              "RelativeDocumentMoniker": "Extensions\\ServiceCollectionExtensions.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Extensions\\ServiceCollectionExtensions.cs",
-              "RelativeToolTip": "Extensions\\ServiceCollectionExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:54:33.253Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-28T23:40:24.774Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "UserValidator.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Validators\\UserValidator.cs",
-              "RelativeDocumentMoniker": "Validators\\UserValidator.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Validators\\UserValidator.cs",
-              "RelativeToolTip": "Validators\\UserValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T02:00:10.816Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Book Keep.csproj",
-              "DocumentMoniker": "C:\\Users\\James\\Source\\Repos\\Book-Keep-Api-\\Book Keep.csproj",
+              "Title": "Book Keep",
+              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Book Keep.csproj",
               "RelativeDocumentMoniker": "Book Keep.csproj",
-              "ToolTip": "C:\\Users\\James\\Source\\Repos\\Book-Keep-Api-\\Book Keep.csproj",
+              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Book Keep.csproj",
               "RelativeToolTip": "Book Keep.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-20T01:59:45.764Z"
+              "WhenOpened": "2025-06-29T04:19:02.447Z",
+              "EditorCaption": ""
             }
           ]
         },
         {
           "DockedWidth": 319,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "BookDTO.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Models\\Book\\BookDTO.cs",
-              "RelativeDocumentMoniker": "Models\\Book\\BookDTO.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Models\\Book\\BookDTO.cs",
-              "RelativeToolTip": "Models\\Book\\BookDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T00:17:37.408Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Book.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Models\\Book\\Book.cs",
-              "RelativeDocumentMoniker": "Models\\Book\\Book.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Models\\Book\\Book.cs",
-              "RelativeToolTip": "Models\\Book\\Book.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T00:17:30.658Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserDTO.cs",
-              "DocumentMoniker": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Models\\User\\UserDTO.cs",
-              "RelativeDocumentMoniker": "Models\\User\\UserDTO.cs",
-              "ToolTip": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Models\\User\\UserDTO.cs",
-              "RelativeToolTip": "Models\\User\\UserDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T23:55:27.27Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         }

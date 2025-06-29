@@ -14,7 +14,7 @@ namespace Book_Keep.Services
         {
             _query = query;
         }
-        // 
+        
         public async Task<Pagination<UserWithDepartmentResponse>> paginatedusers(
             int pageNumber = 1,
             int pageSize = 10,

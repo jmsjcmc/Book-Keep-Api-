@@ -16,6 +16,7 @@ namespace Book_Keep.Helpers.Queries
         {
             var query = _context.User
                 .AsNoTracking()
+                .Include(u => u.Department)
                 .OrderByDescending(u => u.Id)
                 .AsQueryable();
 
@@ -32,6 +33,7 @@ namespace Book_Keep.Helpers.Queries
             {
                 return await _context.User
                     .AsNoTracking()
+                    .Include(u => u.Department)
                     .Where(u => u.FirstName == searchTerm || u.LastName == searchTerm)
                     .OrderByDescending(u => u.Id)
                     .ToListAsync();
@@ -40,6 +42,7 @@ namespace Book_Keep.Helpers.Queries
             {
                 return await _context.User
                     .AsNoTracking()
+                    .Include(u => u.Department)
                     .OrderByDescending(u => u.Id)
                     .ToListAsync();
             }
@@ -49,12 +52,14 @@ namespace Book_Keep.Helpers.Queries
         {
             return await _context.User
                 .AsNoTracking()
+                .Include(u => u.Department)
                 .FirstOrDefaultAsync(u => u.Id == id);
         }
 
         public async Task<User?> patchuserid(int id)
         {
             return await _context.User
+                .Include(u => u.Department)
                 .FirstOrDefaultAsync(u => u.Id == id);
         }
     }

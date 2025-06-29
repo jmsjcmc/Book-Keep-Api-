@@ -18,10 +18,12 @@ namespace Book_Keep.Extensions
             service.AddScoped<AuthenticationHelper>();
             // Service
             service.AddScoped<BookService>();
-            //service.AddScoped<UserService>();
+            service.AddScoped<UserService>();
+            service.AddScoped<DepartmentService>();
             // Queries
             service.AddScoped<BookQueries>();
-            //service.AddScoped<UserQueries>();
+            service.AddScoped<UserQueries>();
+            service.AddScoped<DepartmentQueries>();
             return service;
         }
         // Swagger Documentation

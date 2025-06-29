@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CDM4q4LiPYg=",
+  "dgSpecHash": "CBiB7ZwQd6U=",
   "success": true,
-  "projectFilePath": "C:\\Users\\James\\Source\\Repos\\Book-Keep-Api-\\Book Keep.csproj",
+  "projectFilePath": "C:\\Users\\James\\source\\repos\\Book-Keep-Api-\\Book Keep.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\James\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\James\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
