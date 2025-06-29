@@ -1,4 +1,4 @@
-﻿namespace Book_Keep.Models.User
+﻿namespace Book_Keep.Models
 {
     public class DepartmentRequest
     {

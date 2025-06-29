@@ -3,8 +3,6 @@ using Book_Keep.Helpers;
 using Book_Keep.Helpers.Queries;
 using Book_Keep.Interfaces;
 using Book_Keep.Models;
-using Book_Keep.Models.User;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Book_Keep.Services
@@ -16,64 +14,86 @@ namespace Book_Keep.Services
         {
             _query = query;
         }
-        // [HttpGet("users")]
-        public async Task<Pagination<UserResponse>> paginatedusers(
+        // 
+        public async Task<Pagination<UserWithDepartmentResponse>> paginatedusers(
             int pageNumber = 1,
             int pageSize = 10,
             string? searchTerm = null)
         {
-            var query = _query.filteredusers(searchTerm);
-            var totalcount = await query.CountAsync();
-
-            var users = await PaginationHelper.paginateandproject<User, UserResponse>(
+            var query = _query.paginatedusers(searchTerm);
+            var totalCount = await query.CountAsync();
+            var users = await PaginationHelper.paginateandproject<User, UserWithDepartmentResponse>(
                 query, pageNumber, pageSize, _mapper);
 
-            return PaginationHelper.paginatedresponse(users, totalcount, pageNumber, pageSize);
+            return PaginationHelper.paginatedresponse(users, totalCount, pageNumber, pageSize);
         }
-        // [HttpGet("user/{id}")]
-        public async Task<UserResponse> getuser(int id)
+
+        public async Task<List<UserWithDepartmentResponse>> userslist(string? searchTerm = null)
         {
-            var user = await _query.getmethoduserid(id);
-            return _mapper.Map<UserResponse>(user);
+            var users = await _query.userslist(searchTerm);
+            return _mapper.Map<List<UserWithDepartmentResponse>>(users);
         }
-        // [HttpPost("user")]
-        public async Task<UserResponse> createuser([FromBody] UserRequest request)
+
+        public async Task<UserWithDepartmentResponse> getuser(int id)
+        {
+            var user = await getuserid(id);
+            return _mapper.Map<UserWithDepartmentResponse>(user);
+        }
+
+        public async Task<UserWithDepartmentResponse> createuser(UserRequest request)
         {
             var user = _mapper.Map<User>(request);
+
             _context.User.Add(user);
             await _context.SaveChangesAsync();
 
-            var saveduser = _query.getmethoduserid(user.Id);
-            return _mapper.Map<UserResponse>(saveduser);
+            return await userResponse(user.Id);
         }
-        // [HttpPatch("user/update/{id}")]
-        public async Task<UserResponse> updateuser([FromBody] UserRequest request, int id)
+
+        public async Task<UserWithDepartmentResponse> updateuser(UserRequest request, int id)
         {
-            var user = await _query.patchmethoduserid(id);
+            var user = await patchuserid(id);
+
             _mapper.Map(request, user);
-            user.UpdatedOn = TimeHelper.GetPhilippineStandardTime();
 
             await _context.SaveChangesAsync();
-            var updateduser = _query.getmethoduserid(user.Id);
-            return _mapper.Map<UserResponse>(updateduser);
+
+            return await userResponse(user.Id);
         }
-        // [HttpPatch("user/hide/{id}")]
-        public async Task hideuser (int id)
+
+        public async Task<UserWithDepartmentResponse> removeuser(int id)
         {
-            var user = await _query.patchmethoduserid(id);
+            var user = await patchuserid(id);
 
             user.Removed = true;
 
             _context.User.Update(user);
             await _context.SaveChangesAsync();
+
+            return await userResponse(user.Id);
         }
-        // [HttpDelete("user/delete/{id}")]
-        public async Task deleteuser(int id)
+
+        public async Task<UserWithDepartmentResponse> deleteuser(int id)
         {
-            var user = await _query.patchmethoduserid(id);
+            var user = await patchuserid(id);
 
             _context.User.Remove(user);
             await _context.SaveChangesAsync();
+
+            return await userResponse(user.Id);
+        }
+        private async Task<User?> patchuserid(int id)
+        {
+            return await _query.patchuserid(id);
+        }
+        private async Task<User?> getuserid(int id)
+        {
+            return await _query.getuserid(id);
+        }
+        private async Task<UserWithDepartmentResponse> userResponse(int id)
+        {
+            var user = await getuserid(id);
+            return _mapper.Map<UserWithDepartmentResponse>(user);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Book_Keep.Models.Book
+﻿namespace Book_Keep.Models
 {
     public class BookRequest
     {

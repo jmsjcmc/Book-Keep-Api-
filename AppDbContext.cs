@@ -1,5 +1,4 @@
-﻿using Book_Keep.Models.Book;
-using Book_Keep.Models.User;
+﻿using Book_Keep.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Book_Keep
@@ -21,7 +20,7 @@ namespace Book_Keep
             modelBuilder.Entity<User>(d =>
             {
                 d.HasOne(u => u.Department)
-                .WithMany(u => u.User)
+                .WithMany(d => d.User)
                 .HasForeignKey(u => u.Departmentid);
             });
         }

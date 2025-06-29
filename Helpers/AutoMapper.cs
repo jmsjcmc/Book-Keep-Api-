@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
-using Book_Keep.Models.Book;
-using Book_Keep.Models.User;
+using Book_Keep.Models;
 
 namespace Book_Keep.Helpers
 {
@@ -17,6 +16,9 @@ namespace Book_Keep.Helpers
             CreateMap<UserRequest, User>();
 
             CreateMap<User, UserResponse>();
+
+            CreateMap<User, UserWithDepartmentResponse>()
+                .ForMember(d => d.DepartmentName, o => o.MapFrom(s => s.Department.DepartmentName));
             // Departments Mapping
             CreateMap<DepartmentRequest, Department>();
 
