@@ -42,10 +42,10 @@ namespace Book_Keep.Helpers
             IMapper mapper)
         {
             var totalCount = await query.CountAsync();
-            var items = await PaginationHelper.paginateandproject<TSource, TDestination>(
+            var items = await paginateandproject<TSource, TDestination>(
                 query, pageNumber, pageSize, mapper);
 
-            return PaginationHelper.paginatedresponse(items, totalCount, pageNumber, pageSize);
+            return paginatedresponse(items, totalCount, pageNumber, pageSize);
         }
     }
 }

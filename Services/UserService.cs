@@ -3,7 +3,6 @@ using Book_Keep.Helpers;
 using Book_Keep.Helpers.Queries;
 using Book_Keep.Interfaces;
 using Book_Keep.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace Book_Keep.Services
 {
