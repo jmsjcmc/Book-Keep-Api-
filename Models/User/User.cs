@@ -7,6 +7,7 @@
         public string LastName { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        public string Position { get; set; }
         public int Departmentid { get; set; }
         public Department Department { get; set; }
         public DateTime CreatedOn { get; set; }

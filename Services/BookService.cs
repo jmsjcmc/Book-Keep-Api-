@@ -3,6 +3,7 @@ using Book_Keep.Helpers;
 using Book_Keep.Helpers.Queries;
 using Book_Keep.Interfaces;
 using Book_Keep.Models;
+using Book_Keep.Models.Library.Book;
 
 
 namespace Book_Keep.Services

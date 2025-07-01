@@ -9,6 +9,6 @@
     {
         public int Id { get; set; }
         public string DepartmentName { get; set; }
-        public Boolean Removed { get; set; }
+        public bool Removed { get; set; }
     }
 }

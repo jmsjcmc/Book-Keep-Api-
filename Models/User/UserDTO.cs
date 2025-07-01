@@ -6,6 +6,7 @@
         public string LastName { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        public string Position { get; set; }
         public int Departmentid { get; set; }
     }
     public class UserResponse
@@ -15,6 +16,7 @@
         public string LastName { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        public string Position { get; set; }
         public DateTime CreatedOn { get; set; }
         public DateTime? UpdatedOn { get; set; }
         public Boolean Removed { get; set; }
@@ -26,6 +28,7 @@
         public string LastName { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        public string Position { get; set; }
         public string DepartmentName { get; set; }
         public DateTime CreatedOn { get; set; }
         public DateTime? UpdatedOn { get; set; }

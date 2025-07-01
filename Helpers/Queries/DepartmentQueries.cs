@@ -1,4 +1,4 @@
-﻿using Book_Keep.Models;
+﻿using Book_Keep.Models.Department;
 using Microsoft.EntityFrameworkCore;
 
 namespace Book_Keep.Helpers.Queries

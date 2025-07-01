@@ -24,6 +24,11 @@ namespace Book_Keep.Extensions
             service.AddScoped<BookQueries>();
             service.AddScoped<UserQueries>();
             service.AddScoped<DepartmentQueries>();
+            service.AddScoped<RoomQueries>();
+            service.AddScoped<SectionQueries>();
+            service.AddScoped<ShelfQueries>();
+            service.AddScoped<ShelfSlotQueries>();
+            service.AddScoped<UserQueries>();
             return service;
         }
         // Swagger Documentation

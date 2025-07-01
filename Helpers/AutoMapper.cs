@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using Book_Keep.Models;
+using Book_Keep.Models.Library;
+
 
 namespace Book_Keep.Helpers
 {
@@ -23,6 +25,26 @@ namespace Book_Keep.Helpers
             CreateMap<DepartmentRequest, Department>();
 
             CreateMap<Department, DepartmentResponse>();
+            // Room Mapping
+            CreateMap<RoomRequest, Room>();
+
+            CreateMap<Room, RoomResponse>();
+            // Section Mapping
+            CreateMap<SectionRequest, Section>();
+
+            CreateMap<Section, SectionResponse>()
+                .ForMember(d => d.Room, o => o.MapFrom(s => s.Room.Name));
+            // Shelf Mapping
+            CreateMap<ShelfRequest, Shelf>();
+
+            CreateMap<Shelf, ShelfResponse>()
+                .ForMember(d => d.Section, o => o.MapFrom(s => s.Section.Name));
+
+            // Shelf Slot Mapping
+            CreateMap<ShelfSlotRequest, ShelfSlot>();
+
+            CreateMap<ShelfSlot, ShelfSlotResponse>()
+                .ForMember(d => d.Label, o => o.MapFrom(s => s.Shelf.Label));
         }
     }
 }

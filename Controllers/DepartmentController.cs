@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Book_Keep.Helpers;
-using Book_Keep.Models;
+using Book_Keep.Models.Department.Department;
 using Book_Keep.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
