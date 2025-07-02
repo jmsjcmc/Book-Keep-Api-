@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Book_Keep.Models;
+using Book_Keep.Models.Canteen;
 using Book_Keep.Models.Library;
 
 
@@ -45,6 +46,10 @@ namespace Book_Keep.Helpers
 
             CreateMap<ShelfSlot, ShelfSlotResponse>()
                 .ForMember(d => d.Label, o => o.MapFrom(s => s.Shelf.Label));
+            // Product Mapping
+            CreateMap<ProductRequest, Product>();
+
+            CreateMap<Product, ProductResponse>();
         }
     }
 }

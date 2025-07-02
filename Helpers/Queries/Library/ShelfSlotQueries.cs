@@ -1,7 +1,7 @@
 ﻿using Book_Keep.Models.Library;
 using Microsoft.EntityFrameworkCore;
 
-namespace Book_Keep.Helpers.Queries
+namespace Book_Keep.Helpers.Queries.Library
 {
     public class ShelfSlotQueries
     {

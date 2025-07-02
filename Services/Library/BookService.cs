@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using Book_Keep.Helpers;
-using Book_Keep.Helpers.Queries;
-using Book_Keep.Interfaces;
+using Book_Keep.Helpers.Queries.Library;
+using Book_Keep.Interfaces.Library;
 using Book_Keep.Models;
-using Book_Keep.Models.Library.Book;
+using Book_Keep.Models.Library;
 
 
-namespace Book_Keep.Services
+namespace Book_Keep.Services.Library
 {
     public class BookService : BaseService, IBookService
     {

@@ -1,4 +1,4 @@
-﻿using Book_Keep.Models.Department.Department;
+﻿using Book_Keep.Models;
 
 namespace Book_Keep.Interfaces
 {

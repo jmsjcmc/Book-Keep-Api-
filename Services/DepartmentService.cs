@@ -2,8 +2,7 @@
 using Book_Keep.Helpers;
 using Book_Keep.Helpers.Queries;
 using Book_Keep.Interfaces;
-using Book_Keep.Models.Department;
-using Book_Keep.Models.Department.Department;
+using Book_Keep.Models;
 
 namespace Book_Keep.Services
 {

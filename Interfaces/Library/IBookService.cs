@@ -1,8 +1,7 @@
 ﻿using Book_Keep.Models;
-using Book_Keep.Models.Library.Book;
-using Microsoft.AspNetCore.Mvc;
+using Book_Keep.Models.Library;
 
-namespace Book_Keep.Interfaces
+namespace Book_Keep.Interfaces.Library
 {
     public interface IBookService
     {

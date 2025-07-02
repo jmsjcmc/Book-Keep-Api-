@@ -2,11 +2,11 @@
 using Book_Keep.Helpers;
 using Book_Keep.Models;
 using Book_Keep.Models.Library;
-using Book_Keep.Services;
+using Book_Keep.Services.Library;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Book_Keep.Controllers
+namespace Book_Keep.Controllers.Library
 {
     public class BookController : BaseApiController
     {

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Book_Keep.Helpers;
-using Book_Keep.Helpers.Queries;
+using Book_Keep.Helpers.Queries.Library;
 using Book_Keep.Interfaces.Library;
 using Book_Keep.Models.Library;
 

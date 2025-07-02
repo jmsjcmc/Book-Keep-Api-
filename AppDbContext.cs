@@ -1,4 +1,5 @@
 ﻿using Book_Keep.Models;
+using Book_Keep.Models.Canteen;
 using Book_Keep.Models.Library;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +18,7 @@ namespace Book_Keep
         public DbSet<Section> Section { get; set; }
         public DbSet<Shelf> Shelf { get; set; }
         public DbSet<ShelfSlot> ShelfSlot { get; set; }
+        public DbSet<Product> Product { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
