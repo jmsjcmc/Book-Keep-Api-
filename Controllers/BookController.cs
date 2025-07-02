@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Book_Keep.Helpers;
 using Book_Keep.Models;
-using Book_Keep.Models.Library.Book;
+using Book_Keep.Models.Library;
 using Book_Keep.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

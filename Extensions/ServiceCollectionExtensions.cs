@@ -1,6 +1,7 @@
 ﻿using Book_Keep.Helpers;
 using Book_Keep.Helpers.Queries;
 using Book_Keep.Services;
+using Book_Keep.Services.Library;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -17,18 +18,21 @@ namespace Book_Keep.Extensions
             service.AddScoped<TimeHelper>();
             service.AddScoped<AuthenticationHelper>();
             // Service
-            service.AddScoped<BookService>();
             service.AddScoped<UserService>();
             service.AddScoped<DepartmentService>();
+            service.AddScoped<BookService>();
+            service.AddScoped<RoomService>();
+            service.AddScoped<SectionService>();
+            service.AddScoped<ShelfService>();
+            service.AddScoped<ShelfSlotService>();
             // Queries
-            service.AddScoped<BookQueries>();
             service.AddScoped<UserQueries>();
             service.AddScoped<DepartmentQueries>();
+            service.AddScoped<BookQueries>();
             service.AddScoped<RoomQueries>();
             service.AddScoped<SectionQueries>();
             service.AddScoped<ShelfQueries>();
             service.AddScoped<ShelfSlotQueries>();
-            service.AddScoped<UserQueries>();
             return service;
         }
         // Swagger Documentation

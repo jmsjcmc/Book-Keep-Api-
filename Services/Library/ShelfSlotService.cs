@@ -48,7 +48,27 @@ namespace Book_Keep.Services.Library
             return await shelfslotResponse(slot.Id);
         }
 
+        public async Task<ShelfSlotResponse> removeshelfslot(int id)
+        {
+            var slot = await patchshelfslotid(id);
 
+            slot.Removed = true;
+
+            _context.ShelfSlot.Update(slot);
+            await _context.SaveChangesAsync();
+
+            return await shelfslotResponse(slot.Id);
+        }
+
+        public async Task<ShelfSlotResponse> deleteshelfslot(int id)
+        {
+            var slot = await patchshelfslotid(id);
+
+            _context.ShelfSlot.Remove(slot);
+            await _context.SaveChangesAsync();
+
+            return await shelfslotResponse(slot.Id);
+        }
         private async Task<ShelfSlot?> getshelfslotid(int id)
         {
             return await _query.getshelfslotid(id);
