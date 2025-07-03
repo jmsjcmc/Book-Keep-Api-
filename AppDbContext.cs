@@ -19,6 +19,7 @@ namespace Book_Keep
         public DbSet<Shelf> Shelf { get; set; }
         public DbSet<ShelfSlot> ShelfSlot { get; set; }
         public DbSet<Product> Product { get; set; }
+        public DbSet<Student> Student { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -56,6 +57,13 @@ namespace Book_Keep
                 d.HasOne(b => b.Shelfslot)
                 .WithOne(b => b.Book)
                 .HasForeignKey<Book>(b => b.Shelfslotid);
+            });
+
+            modelBuilder.Entity<Student>(d =>
+            {
+                d.HasOne(s => s.Department)
+                .WithMany(s => s.Student)
+                .HasForeignKey(s => s.DepartmentId);
             });
         }
     }

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Book_Keep.Helpers;
+using Book_Keep.Helpers.Excel;
 using Book_Keep.Models;
 using Book_Keep.Models.Library;
 using Book_Keep.Services.Library;
@@ -10,11 +11,11 @@ namespace Book_Keep.Controllers.Library
 {
     public class BookController : BaseApiController
     {
-        private readonly ExcelHelper _excelHelper;
+        private readonly BookExcel _excel;
         private readonly BookService _bookService;
-        public BookController(AppDbContext context, IMapper mapper, ExcelHelper excelHelper, BookService bookService) : base (context, mapper)
+        public BookController(AppDbContext context, IMapper mapper, BookExcel excel, BookService bookService) : base (context, mapper)
         {
-            _excelHelper = excelHelper;
+            _excel = excel;
             _bookService = bookService;
         }
         // Export books
@@ -26,7 +27,7 @@ namespace Book_Keep.Controllers.Library
                 var books = await _context.Book
                     .ToListAsync();
 
-                var file = _excelHelper.exportbooks(books);
+                var file = _excel.exportbooks(books);
                 return File(file, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Books.xlsx");
             }
             catch (Exception e)
@@ -40,7 +41,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var file = _excelHelper.generatebookstemplate();
+                var file = _excel.generatebooktemplate();
                 return File(file, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "BookTemplate.xlsx");
             }
             catch (Exception e)
@@ -67,11 +68,11 @@ namespace Book_Keep.Controllers.Library
         }
         // Import all books
         [HttpPost("books/import")]
-        public async Task<ActionResult> importBooks(IFormFile file)
+        public async Task<ActionResult<List<BookResponse>>> importBooks(IFormFile file)
         {
             try
             {
-                var books = _excelHelper.importbooks(file);
+                var books = await _excel.importbooks(file);
                 await _context.Book.AddRangeAsync(books);
                 await _context.SaveChangesAsync();
 

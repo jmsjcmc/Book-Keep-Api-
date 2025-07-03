@@ -593,4 +593,3 @@ C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\refint\Book Keep
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.pdb
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.genruntimeconfig.cache
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\ref\Book Keep.dll
-C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

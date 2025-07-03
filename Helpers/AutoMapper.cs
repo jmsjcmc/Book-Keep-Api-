@@ -3,7 +3,6 @@ using Book_Keep.Models;
 using Book_Keep.Models.Canteen;
 using Book_Keep.Models.Library;
 
-
 namespace Book_Keep.Helpers
 {
     public class AutoMapper : Profile
@@ -50,6 +49,10 @@ namespace Book_Keep.Helpers
             CreateMap<ProductRequest, Product>();
 
             CreateMap<Product, ProductResponse>();
+            // Student Mapping 
+            CreateMap<StudentRequest, Student>();
+
+            CreateMap<Student, StudentResponse>();
         }
     }
 }
