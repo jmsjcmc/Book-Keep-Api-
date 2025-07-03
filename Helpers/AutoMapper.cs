@@ -52,7 +52,8 @@ namespace Book_Keep.Helpers
             // Student Mapping 
             CreateMap<StudentRequest, Student>();
 
-            CreateMap<Student, StudentResponse>();
+            CreateMap<Student, StudentResponse>()
+                .ForMember(d => d.DepartmentName, o => o.MapFrom(s => s.Department.DepartmentName));
         }
     }
 }
