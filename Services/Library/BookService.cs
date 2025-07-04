@@ -24,6 +24,12 @@ namespace Book_Keep.Services.Library
             var query = _query.booksquery();
             return await PaginationHelper.paginateandmap<Book, BookResponse>(query, pageNumber, pageSize, _mapper);
         }
+        // [HttpGet("book/{id}")]
+        public async Task<BookResponse> getbook(int id)
+        {
+            var book = await _query.getmethodbookquery(id);
+            return _mapper.Map<BookResponse>(book);
+        }
         // [HttpPost("book")]
         public async Task<BookResponse> createbook(BookRequest request)
         {

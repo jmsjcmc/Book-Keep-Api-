@@ -50,7 +50,7 @@ namespace Book_Keep.Controllers.Library
             }
         }
         // Fetch all books (paginated)
-        [HttpGet("books")]
+        [HttpGet("books/paginated")]
         public async Task<ActionResult<Pagination<BookResponse>>> getBooks(
             [FromQuery] int pageNumber = 1,
             [FromQuery] int pageSize = 10,
@@ -62,6 +62,19 @@ namespace Book_Keep.Controllers.Library
                 return response;
 
             }catch (Exception e)
+            {
+                return HandleException(e);
+            }
+        }
+        // Fetch specific book
+        [HttpGet("book/{id}")]
+        public async Task<ActionResult<BookResponse>> getbook(int id)
+        {
+            try
+            {
+                var response = await _bookService.getbook(id);
+                return response;
+            } catch (Exception e)
             {
                 return HandleException(e);
             }

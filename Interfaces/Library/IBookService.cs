@@ -9,6 +9,7 @@ namespace Book_Keep.Interfaces.Library
             int pageNumber = 1,
             int pageSize = 10,
             string? searchTerm = null);
+        Task<BookResponse> getbook(int id);
         Task<BookResponse> createbook(BookRequest request);
         Task<BookResponse> updatebook(BookRequest request, int id);
         Task<BookResponse> togglehide(int id);
