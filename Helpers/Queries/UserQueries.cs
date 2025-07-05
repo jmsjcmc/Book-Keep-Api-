@@ -11,12 +11,13 @@ namespace Book_Keep.Helpers.Queries
         {
             _context = context;
         }
-
+        // Query for fetching all users with optional filter for first name & last name
         public IQueryable<User> paginatedusers(string? searchTerm = null)
         {
             var query = _context.User
                 .AsNoTracking()
                 .Include(u => u.Department)
+                .Where(u => !u.Removed)
                 .OrderByDescending(u => u.Id)
                 .AsQueryable();
 
@@ -26,7 +27,7 @@ namespace Book_Keep.Helpers.Queries
             };
             return query;
         }
-
+        // Query for fetching all users with pagination with optional filter for first name and last name
         public async Task<List<User>> userslist(string? searchTerm = null)
         {
             if (!string.IsNullOrWhiteSpace(searchTerm))
@@ -47,7 +48,7 @@ namespace Book_Keep.Helpers.Queries
                     .ToListAsync();
             }
         }
-
+        // Query for fetching specific user for GET method
         public async Task<User?> getuserid(int id)
         {
             return await _context.User
@@ -55,7 +56,7 @@ namespace Book_Keep.Helpers.Queries
                 .Include(u => u.Department)
                 .FirstOrDefaultAsync(u => u.Id == id);
         }
-
+        // Query for fetching specific users for PATCH/PUT/DELETE methods
         public async Task<User?> patchuserid(int id)
         {
             return await _context.User

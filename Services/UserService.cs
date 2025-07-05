@@ -38,6 +38,7 @@ namespace Book_Keep.Services
         public async Task<UserWithDepartmentResponse> createuser(UserRequest request)
         {
             var user = _mapper.Map<User>(request);
+            user.CreatedOn = TimeHelper.GetPhilippineStandardTime();
 
             _context.User.Add(user);
             await _context.SaveChangesAsync();

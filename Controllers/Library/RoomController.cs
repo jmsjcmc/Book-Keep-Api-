@@ -13,7 +13,7 @@ namespace Book_Keep.Controllers.Library
         {
             _service = service;
         }
-
+        // Fetch all rooms
         [HttpGet("rooms/list")]
         public async Task<ActionResult<List<RoomResponse>>> roomslist(string? searchTerm = null)
         {
@@ -26,7 +26,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Fetch specific room
         [HttpGet("room/{id}")]
         public async Task<ActionResult<RoomResponse>> getroom(int id)
         {
