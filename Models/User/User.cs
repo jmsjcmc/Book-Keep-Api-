@@ -5,7 +5,7 @@
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Username { get; set; }
+        public string Userid { get; set; }
         public string Password { get; set; }
         public string Position { get; set; }
         public int Departmentid { get; set; }

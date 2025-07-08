@@ -10,6 +10,7 @@ namespace Book_Keep.Interfaces
             string? searchTerm = null);
         Task<List<UserWithDepartmentResponse>> userslist(string? searchTerm = null);
         Task<UserWithDepartmentResponse> getuser(int id);
+        Task<object> userlogin(Login request);
         Task<UserWithDepartmentResponse> createuser(UserRequest request);
         Task<UserWithDepartmentResponse> updateuser(UserRequest request, int id);
         Task<UserWithDepartmentResponse> removeuser(int id);

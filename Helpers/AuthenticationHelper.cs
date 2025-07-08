@@ -21,7 +21,7 @@ namespace Book_Keep.Helpers
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.Username)
+                new Claim(ClaimTypes.Name, user.Userid)
             };
             var tokendescriptor = new SecurityTokenDescriptor
             {

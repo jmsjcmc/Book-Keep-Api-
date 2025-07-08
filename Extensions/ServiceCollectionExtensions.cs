@@ -26,7 +26,6 @@ namespace Book_Keep.Extensions
             service.AddScoped<SectionService>();
             service.AddScoped<ShelfService>();
             service.AddScoped<ShelfSlotService>();
-            service.AddScoped<StudentService>();
             // Queries
             service.AddScoped<UserQueries>();
             service.AddScoped<DepartmentQueries>();
@@ -35,7 +34,6 @@ namespace Book_Keep.Extensions
             service.AddScoped<SectionQueries>();
             service.AddScoped<ShelfQueries>();
             service.AddScoped<ShelfSlotQueries>();
-            service.AddScoped<StudentQueries>();
             return service;
         }
         // Swagger Documentation

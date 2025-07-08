@@ -15,7 +15,10 @@ namespace Book_Keep.Helpers
 
             CreateMap<Book, BookResponse>();
             // Users Mapping
-            CreateMap<UserRequest, User>();
+            CreateMap<UserRequest, User>()
+                .ForMember(d => d.Password, o => o.Ignore())
+                .ForMember(d => d.CreatedOn, o => o.Ignore())
+                .ForMember(d => d.UpdatedOn, o => o.Ignore());
 
             CreateMap<User, UserResponse>();
 
@@ -49,11 +52,6 @@ namespace Book_Keep.Helpers
             CreateMap<ProductRequest, Product>();
 
             CreateMap<Product, ProductResponse>();
-            // Student Mapping 
-            CreateMap<StudentRequest, Student>();
-
-            CreateMap<Student, StudentResponse>()
-                .ForMember(d => d.DepartmentName, o => o.MapFrom(s => s.Department.DepartmentName));
         }
     }
 }
