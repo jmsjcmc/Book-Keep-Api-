@@ -15,7 +15,6 @@
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Userid { get; set; }
-        public string Password { get; set; }
         public string Position { get; set; }
         public DateTime CreatedOn { get; set; }
         public DateTime? UpdatedOn { get; set; }

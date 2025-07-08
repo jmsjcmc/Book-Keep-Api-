@@ -1,4 +1,5 @@
 ﻿using Book_Keep.Models;
+using System.Security.Claims;
 
 namespace Book_Keep.Interfaces
 {
@@ -10,6 +11,7 @@ namespace Book_Keep.Interfaces
             string? searchTerm = null);
         Task<List<UserWithDepartmentResponse>> userslist(string? searchTerm = null);
         Task<UserWithDepartmentResponse> getuser(int id);
+        Task<UserResponse> getuserdetail(ClaimsPrincipal detail);
         Task<object> userlogin(Login request);
         Task<UserWithDepartmentResponse> createuser(UserRequest request);
         Task<UserWithDepartmentResponse> updateuser(UserRequest request, int id);

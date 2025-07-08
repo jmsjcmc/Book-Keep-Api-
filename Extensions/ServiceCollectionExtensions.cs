@@ -3,6 +3,7 @@ using Book_Keep.Helpers.Queries;
 using Book_Keep.Helpers.Queries.Library;
 using Book_Keep.Services;
 using Book_Keep.Services.Library;
+using Book_Keep.Validators;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -18,6 +19,8 @@ namespace Book_Keep.Extensions
             service.AddScoped<ExcelHelper>();
             service.AddScoped<TimeHelper>();
             service.AddScoped<AuthenticationHelper>();
+            // Validators
+            service.AddScoped<UserValidator>();
             // Service
             service.AddScoped<UserService>();
             service.AddScoped<DepartmentService>();

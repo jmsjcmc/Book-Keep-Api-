@@ -5,6 +5,7 @@ using Book_Keep.Interfaces;
 using Book_Keep.Models;
 using Book_Keep.Validators;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace Book_Keep.Services
 {
@@ -41,6 +42,14 @@ namespace Book_Keep.Services
             return _mapper.Map<UserWithDepartmentResponse>(user);
         }
         // 
+        public async Task<UserResponse> getuserdetail(ClaimsPrincipal detail)
+        {
+            int userId = UserValidator.ValidateUserClaim(detail);
+            var user = await getuserid(userId);
+
+            return _mapper.Map<UserResponse>(user);
+        }
+        // 
         public async Task<object> userlogin(Login request)
         {
             await _validator.ValidateLoginRequest(request);
@@ -52,13 +61,14 @@ namespace Book_Keep.Services
             await _context.SaveChangesAsync();
             return new
             {
-                accessToken = accessToken
+                AccessToken = accessToken
             };
         }
         // 
         public async Task<UserWithDepartmentResponse> createuser(UserRequest request)
         {
             var user = _mapper.Map<User>(request);
+            user.Password = BCrypt.Net.BCrypt.HashPassword(request.Password);
             user.CreatedOn = TimeHelper.GetPhilippineStandardTime();
 
             _context.User.Add(user);
@@ -72,6 +82,7 @@ namespace Book_Keep.Services
             var user = await patchuserid(id);
 
             _mapper.Map(request, user);
+            user.Password = BCrypt.Net.BCrypt.HashPassword(request.Password);
 
             await _context.SaveChangesAsync();
 

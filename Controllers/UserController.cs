@@ -57,6 +57,31 @@ namespace Book_Keep.Controllers
             }
         }
 
+        [HttpGet("user-detail")]
+        public async Task<ActionResult<UserResponse>> userdetail()
+        {
+            try
+            {
+                var response = await _service.getuserdetail(User);
+                return response;
+            } catch (Exception e)
+            {
+                return HandleException(e);
+            }
+        }
+
+        [HttpPost("login")]
+        public async Task<ActionResult> login([FromBody] Login request)
+        {
+            try
+            {
+                var response = await _service.userlogin(request);
+                return Ok(response);
+            } catch (Exception e)
+            {
+                return HandleException(e);
+            }
+        }
         [HttpPost("user")]
         public async Task<ActionResult<UserWithDepartmentResponse>> createuser([FromBody] UserRequest request)
         {
