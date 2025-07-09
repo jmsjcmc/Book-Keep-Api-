@@ -8,10 +8,13 @@
         public string Userid { get; set; }
         public string Password { get; set; }
         public string Position { get; set; }
+        public int Roleid { get; set; }
+        public Role Role { get; set; }
         public int Departmentid { get; set; }
         public Department Department { get; set; }
         public DateTime CreatedOn { get; set; }
         public DateTime? UpdatedOn { get; set; }
         public Boolean Removed { get; set; }
+
     }
 }
