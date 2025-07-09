@@ -2915,10 +2915,6 @@
             "type": "string",
             "nullable": true
           },
-          "password": {
-            "type": "string",
-            "nullable": true
-          },
           "position": {
             "type": "string",
             "nullable": true

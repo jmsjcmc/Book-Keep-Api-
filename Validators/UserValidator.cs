@@ -11,7 +11,13 @@ namespace Book_Keep.Validators
         {
             _context = context;
         }
-
+        public async Task ValidateUserAddRequest(UserRequest request)
+        {
+            if (await _context.User.AnyAsync(u => u.Userid == request.Userid))
+            {
+                throw new ArgumentException("User ID taken.");
+            }
+        }
         public async Task ValidateLoginRequest(Login request)
         {
             var user = await _context.User
