@@ -1,28 +1,29 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace Book_Keep.Migrations
 {
     /// <inheritdoc />
-    public partial class _4 : Migration
+    public partial class _1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<string>(
-                name: "Position",
-                table: "User",
-                type: "nvarchar(max)",
-                nullable: false,
-                defaultValue: "");
-
-            migrationBuilder.AddColumn<int>(
-                name: "Shelfslotid",
-                table: "Book",
-                type: "int",
-                nullable: false,
-                defaultValue: 0);
+            migrationBuilder.CreateTable(
+                name: "Department",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    DepartmentName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Removed = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Department", x => x.Id);
+                });
 
             migrationBuilder.CreateTable(
                 name: "Product",
@@ -43,6 +44,21 @@ namespace Book_Keep.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Role",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Active = table.Column<bool>(type: "bit", nullable: false),
+                    Removed = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Role", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Room",
                 columns: table => new
                 {
@@ -57,27 +73,37 @@ namespace Book_Keep.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Student",
+                name: "User",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    StudentId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Userid = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DepartmentId = table.Column<int>(type: "int", nullable: false),
+                    Position = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Roleid = table.Column<int>(type: "int", nullable: false),
+                    Departmentid = table.Column<int>(type: "int", nullable: false),
+                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Removed = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Student", x => x.Id);
+                    table.PrimaryKey("PK_User", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Student_Department_DepartmentId",
-                        column: x => x.DepartmentId,
+                        name: "FK_User_Department_Departmentid",
+                        column: x => x.Departmentid,
                         principalTable: "Department",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_User_Role_Roleid",
+                        column: x => x.Roleid,
+                        principalTable: "Role",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -97,6 +123,30 @@ namespace Book_Keep.Migrations
                         name: "FK_Section_Room_Roomid",
                         column: x => x.Roomid,
                         principalTable: "Room",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UserRole",
+                columns: table => new
+                {
+                    Userid = table.Column<int>(type: "int", nullable: false),
+                    Roleid = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserRole", x => new { x.Userid, x.Roleid });
+                    table.ForeignKey(
+                        name: "FK_UserRole_Role_Roleid",
+                        column: x => x.Roleid,
+                        principalTable: "Role",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_UserRole_User_Userid",
+                        column: x => x.Userid,
+                        principalTable: "User",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -144,6 +194,34 @@ namespace Book_Keep.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Book",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Isbn = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Author = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Publisher = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PublicationDate = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Edition = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Language = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Shelfslotid = table.Column<int>(type: "int", nullable: false),
+                    Removed = table.Column<bool>(type: "bit", nullable: false),
+                    AddedOn = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Book", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Book_ShelfSlot_Shelfslotid",
+                        column: x => x.Shelfslotid,
+                        principalTable: "ShelfSlot",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Book_Shelfslotid",
                 table: "Book",
@@ -166,55 +244,53 @@ namespace Book_Keep.Migrations
                 column: "Shelfid");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Student_DepartmentId",
-                table: "Student",
-                column: "DepartmentId");
+                name: "IX_User_Departmentid",
+                table: "User",
+                column: "Departmentid");
 
-            migrationBuilder.AddForeignKey(
-                name: "FK_Book_ShelfSlot_Shelfslotid",
-                table: "Book",
-                column: "Shelfslotid",
-                principalTable: "ShelfSlot",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+            migrationBuilder.CreateIndex(
+                name: "IX_User_Roleid",
+                table: "User",
+                column: "Roleid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserRole_Roleid",
+                table: "UserRole",
+                column: "Roleid");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Book_ShelfSlot_Shelfslotid",
-                table: "Book");
+            migrationBuilder.DropTable(
+                name: "Book");
 
             migrationBuilder.DropTable(
                 name: "Product");
 
             migrationBuilder.DropTable(
+                name: "UserRole");
+
+            migrationBuilder.DropTable(
                 name: "ShelfSlot");
 
             migrationBuilder.DropTable(
-                name: "Student");
+                name: "User");
 
             migrationBuilder.DropTable(
                 name: "Shelf");
+
+            migrationBuilder.DropTable(
+                name: "Department");
+
+            migrationBuilder.DropTable(
+                name: "Role");
 
             migrationBuilder.DropTable(
                 name: "Section");
 
             migrationBuilder.DropTable(
                 name: "Room");
-
-            migrationBuilder.DropIndex(
-                name: "IX_Book_Shelfslotid",
-                table: "Book");
-
-            migrationBuilder.DropColumn(
-                name: "Position",
-                table: "User");
-
-            migrationBuilder.DropColumn(
-                name: "Shelfslotid",
-                table: "Book");
         }
     }
 }

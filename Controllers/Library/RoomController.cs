@@ -39,7 +39,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Create new room
         [HttpPost("room")]
         public async Task<ActionResult<RoomResponse>> createroom([FromBody] RoomRequest request)
         {
@@ -52,7 +52,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Update specific room 
         [HttpPatch("room/update/{id}")]
         public async Task<ActionResult<RoomResponse>> updateroom([FromBody] RoomRequest request, int id)
         {
@@ -65,7 +65,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Remove specific room with deleting in database (Soft Delete)
         [HttpPatch("room/hide/{id}")]
         public async Task<ActionResult<RoomResponse>> removeroom(int id)
         {
@@ -78,7 +78,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Delete specific room from database
         [HttpDelete("room/delete/{id}")]
         public async Task<ActionResult<RoomResponse>> deleteroom(int id)
         {

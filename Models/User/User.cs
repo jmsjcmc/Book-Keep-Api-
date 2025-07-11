@@ -15,6 +15,6 @@
         public DateTime CreatedOn { get; set; }
         public DateTime? UpdatedOn { get; set; }
         public Boolean Removed { get; set; }
-
+        public ICollection<UserRole> UserRole { get; set; }
     }
 }

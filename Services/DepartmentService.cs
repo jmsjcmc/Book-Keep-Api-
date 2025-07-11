@@ -13,18 +13,19 @@ namespace Book_Keep.Services
         {
             _query = query;
         }
+        // [HttpGet("departments/list")]
         public async Task<List<DepartmentResponse>> departmentslist(string? searchTerm = null)
         {
             var departments = await _query.departmentslist(searchTerm);
             return _mapper.Map<List<DepartmentResponse>>(departments);
         }
-
+        // [HttpGet("department/{id}")]
         public async Task<DepartmentResponse> getdepartment(int id)
         {
             var department = await getdepartmentid(id);
             return _mapper.Map<DepartmentResponse>(department);
         }
-
+        // [HttpPost("department")]
         public async Task<DepartmentResponse> createdepartment(DepartmentRequest request)
         {
             var department = _mapper.Map<Department>(request);
@@ -33,7 +34,7 @@ namespace Book_Keep.Services
 
             return await departmentResponse(department.Id);
         }
-
+        // [HttpPatch("department/update/{id}")]
         public async Task<DepartmentResponse> updatedepartment(DepartmentRequest request, int id)
         {
             var department = await patchdepartmentid(id);
@@ -43,7 +44,7 @@ namespace Book_Keep.Services
 
             return await departmentResponse(department.Id);
         }
-
+        // [HttpPatch("department/hide/{id}")]
         public async Task<DepartmentResponse> removedepartment(int id)
         {
             var department = await patchdepartmentid(id);
@@ -55,7 +56,7 @@ namespace Book_Keep.Services
 
             return await departmentResponse(department.Id);
         }
-
+        // [HttpDelete("department/delete/{id}")]
         public async Task<DepartmentResponse> deletedepartment(int id)
         {
             var department = await patchdepartmentid(id);
@@ -65,6 +66,7 @@ namespace Book_Keep.Services
 
             return await departmentResponse(department.Id);
         }
+        // Helpers
         private async Task<Department?> getdepartmentid(int id)
         {
             return await _query.getdepartmentid(id);

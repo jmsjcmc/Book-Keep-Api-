@@ -13,6 +13,7 @@ namespace Book_Keep.Interfaces
         Task<UserWithDepartmentResponse> getuser(int id);
         Task<UserResponse> getuserdetail(ClaimsPrincipal detail);
         Task<object> userlogin(Login request);
+        Task<UserResponse> assignrole(UserRoleRequest request);
         Task<UserWithDepartmentResponse> createuser(UserRequest request);
         Task<UserWithDepartmentResponse> updateuser(UserRequest request, int id);
         Task<UserWithDepartmentResponse> removeuser(int id);

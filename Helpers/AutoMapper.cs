@@ -52,6 +52,16 @@ namespace Book_Keep.Helpers
             CreateMap<ProductRequest, Product>();
 
             CreateMap<Product, ProductResponse>();
+            // Role Mapping
+            CreateMap<RoleRequest, Role>();
+
+            CreateMap<Role, RoleResponse>();
+            // User Role Mapping
+            CreateMap<UserRoleRequest, UserRole>();
+
+            CreateMap<UserRole, UserRoleResponse>()
+                .ForMember(d => d.User, o => o.MapFrom(s => s.User))
+                .ForMember(d => d.Role, o => o.MapFrom(s => s.Role));
         }
     }
 }

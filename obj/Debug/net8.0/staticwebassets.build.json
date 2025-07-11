@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "pgG1Aure36I+GB2IlnyjsV3SPkak3DXFzh08ycW/tq4=",
-  "Source": "Book Keep",
-  "BasePath": "_content/Book Keep",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"vQ0kdxSe5qV7RdlP31c+18d0Me8zfX+AQl0LTVpNU/c=","Source":"Book Keep","BasePath":"_content/Book Keep","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

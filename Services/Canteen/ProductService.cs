@@ -14,7 +14,7 @@ namespace Book_Keep.Services.Canteen
         {
             _query = query;
         }
-
+        // [HttpGet("products/paginated")]
         public async Task<Pagination<ProductResponse>> paginatedproducts(
             int pageNumber = 1,
             int pageSize = 10,
@@ -23,20 +23,20 @@ namespace Book_Keep.Services.Canteen
             var query = _query.paginatedproducts(searchTerm);
             return await PaginationHelper.paginateandmap<Product, ProductResponse>(query, pageNumber, pageSize, _mapper);
         }
-
+        // [HttpGet("products/list")]
         public async Task<List<ProductResponse>> productslist(string? searchTerm = null)
         {
             var products = await _query.productslist(searchTerm);
             return _mapper.Map<List<ProductResponse>>(products);
-        } 
-
+        }
+        // [HttpGet("product/{id}")]
         public async Task<ProductResponse> getproduct(int id)
         {
             var product = await getproductid(id);
 
             return _mapper.Map<ProductResponse>(product);
         }
-
+        // [HttpPost("product")]
         public async Task<ProductResponse> createproduct(ProductRequest request)
         {
             var product = _mapper.Map<Product>(request);
@@ -46,7 +46,7 @@ namespace Book_Keep.Services.Canteen
 
             return await productResponse(product.Id);
         }
-
+        // [HttpPatch("product/update/{id}")]
         public async Task<ProductResponse> updateproduct(ProductRequest request, int id)
         {
             var product = await patchproductid(id);
@@ -56,7 +56,7 @@ namespace Book_Keep.Services.Canteen
 
             return await productResponse(product.Id);
         }
-
+        // [HttpPatch("product/toggle-status")]
         public async Task<ProductResponse> togglestatus(int id)
         {
             var product = await patchproductid(id);
@@ -68,7 +68,7 @@ namespace Book_Keep.Services.Canteen
 
             return await productResponse(product.Id);
         }
-
+        // [HttpPatch("product/hide/{id}")]
         public async Task<ProductResponse> removeproduct(int id)
         {
             var product = await patchproductid(id);
@@ -80,7 +80,7 @@ namespace Book_Keep.Services.Canteen
 
             return await productResponse(product.Id);
         }
-
+        // [HttpDelete("product/delete/{id}")]
         public async Task<ProductResponse> deleteproduct(int id)
         {
             var product = await patchproductid(id);
@@ -90,6 +90,7 @@ namespace Book_Keep.Services.Canteen
 
             return await productResponse(product.Id);
         }
+        // Helpers
         private async Task<Product?> getproductid(int id)
         {
             return await _query.getproductid(id);

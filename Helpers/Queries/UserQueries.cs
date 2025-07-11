@@ -17,6 +17,7 @@ namespace Book_Keep.Helpers.Queries
             var query = _context.User
                 .AsNoTracking()
                 .Include(u => u.Department)
+                .Include(u => u.UserRole)
                 .Where(u => !u.Removed)
                 .OrderByDescending(u => u.Id)
                 .AsQueryable();
@@ -35,6 +36,7 @@ namespace Book_Keep.Helpers.Queries
                 return await _context.User
                     .AsNoTracking()
                     .Include(u => u.Department)
+                    .Include(u => u.UserRole)
                     .Where(u => u.FirstName == searchTerm || u.LastName == searchTerm)
                     .OrderByDescending(u => u.Id)
                     .ToListAsync();
@@ -44,6 +46,7 @@ namespace Book_Keep.Helpers.Queries
                 return await _context.User
                     .AsNoTracking()
                     .Include(u => u.Department)
+                    .Include(u => u.UserRole)
                     .OrderByDescending(u => u.Id)
                     .ToListAsync();
             }
@@ -54,6 +57,7 @@ namespace Book_Keep.Helpers.Queries
             return await _context.User
                 .AsNoTracking()
                 .Include(u => u.Department)
+                .Include(u => u.UserRole)
                 .FirstOrDefaultAsync(u => u.Id == id);
         }
         // Query for fetching specific users for PATCH/PUT/DELETE methods
@@ -61,6 +65,7 @@ namespace Book_Keep.Helpers.Queries
         {
             return await _context.User
                 .Include(u => u.Department)
+                .Include(u => u.UserRole)
                 .FirstOrDefaultAsync(u => u.Id == id);
         }
     }

@@ -14,7 +14,7 @@ namespace Book_Keep.Controllers.Library
         {
             _service = service;
         }
-
+        // Fetch all list of shelf slots with optional filter for row or column
         [HttpGet("shelf-slots/list")]
         public async Task<ActionResult<List<ShelfSlotResponse>>> shelfslotslist(string? searchTerm = null)
         {
@@ -27,7 +27,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Fetch specific shelf slot
         [HttpGet("shelf-slot/{id}")]
         public async Task<ActionResult<ShelfSlotResponse>> getshelfslot(int id)
         {
@@ -40,7 +40,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Create new shelf slot
         [HttpPost("shelf-slot")]
         public async Task<ActionResult<ShelfSlotResponse>> createshelfslot([FromBody] ShelfSlotRequest request)
         {
@@ -53,7 +53,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Update specific shelf slot
         [HttpPatch("shelf-slot/update/{id}")]
         public async Task<ActionResult<ShelfSlotResponse>> updateshelfslot([FromBody] ShelfSlotRequest request, int id)
         {
@@ -66,7 +66,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Remove specific shelf slot without removing in database (Soft delete)
         [HttpPatch("shelf-slot/hide/{id}")]
         public async Task<ActionResult<ShelfSlotResponse>> removeshelfslot(int id)
         {
@@ -79,7 +79,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Delete specific shelf slot in database
         [HttpDelete("shelf-slot/delete/{id}")]
         public async Task<ActionResult<ShelfSlotResponse>> deleteshelfslot(int id)
         {

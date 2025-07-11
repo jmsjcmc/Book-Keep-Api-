@@ -13,19 +13,19 @@ namespace Book_Keep.Services.Library
         {
             _query = query;
         }
-        // 
+        // [HttpGet("rooms/list")]
         public async Task<List<RoomResponse>> roomslist(string? searchTerm = null)
         {
             var rooms = await _query.roomslist(searchTerm);
             return _mapper.Map<List<RoomResponse>>(rooms);
         }
-        // 
+        // [HttpGet("room/{id}")]
         public async Task<RoomResponse> getroom(int id)
         {
             var room = await getroomid(id);
             return _mapper.Map<RoomResponse>(room);
         }
-        // 
+        // [HttpPost("room")]
         public async Task<RoomResponse> createroom(RoomRequest request)
         {
             var room = _mapper.Map<Room>(request);
@@ -35,7 +35,7 @@ namespace Book_Keep.Services.Library
 
             return await roomResponse(room.Id);
         }
-        // 
+        // [HttpPatch("room/update/{id}")]
         public async Task<RoomResponse> updateroom(RoomRequest request, int id)
         {
             var room = await patchroomid(id);
@@ -46,7 +46,7 @@ namespace Book_Keep.Services.Library
 
             return await roomResponse(room.Id);
         }
-        // 
+        // [HttpPatch("room/hide/{id}")]
         public async Task<RoomResponse> removeroom(int id)
         {
             var room = await patchroomid(id);
@@ -58,7 +58,7 @@ namespace Book_Keep.Services.Library
 
             return await roomResponse(room.Id);
         }
-        //
+        // [HttpDelete("room/delete/{id}")]
         public async Task<RoomResponse> deleteroom(int id)
         {
             var room = await patchroomid(id);

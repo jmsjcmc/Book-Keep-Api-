@@ -2,7 +2,6 @@
 using Book_Keep.Helpers;
 using Book_Keep.Models.Library;
 using Book_Keep.Services.Library;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Book_Keep.Controllers.Library
@@ -14,7 +13,7 @@ namespace Book_Keep.Controllers.Library
         {
             _service = service;
         }
-
+        // Fetch all sections list with optional filter for section name
         [HttpGet("sections/list")]
         public async Task<ActionResult<List<SectionResponse>>> sectionslist(string? searchTerm = null)
         {
@@ -27,7 +26,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Fetch specific section
         [HttpGet("section/{id}")]
         public async Task<ActionResult<SectionResponse>> getsection(int id)
         {
@@ -40,7 +39,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Create new section
         [HttpPost("section")]
         public async Task<ActionResult<SectionResponse>> createsection([FromBody] SectionRequest request)
         {
@@ -53,7 +52,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Update specific section
         [HttpPatch("section/update/{id}")]
         public async Task<ActionResult<SectionResponse>> updatesection([FromBody] SectionRequest request, int id)
         {
@@ -66,7 +65,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Remove specific section without deleting in database (Soft delete)
         [HttpPatch("section/hide/{id}")]
         public async Task<ActionResult<SectionResponse>> removesection(int id)
         {
@@ -79,7 +78,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Delete specific section in database
         [HttpDelete("section/delete/{id}")]
         public async Task<ActionResult<SectionResponse>> deletesection(int id)
         {

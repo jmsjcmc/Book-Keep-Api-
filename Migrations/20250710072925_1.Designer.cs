@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Book_Keep.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250708063010_5")]
-    partial class _5
+    [Migration("20250710072925_1")]
+    partial class _1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -229,6 +229,29 @@ namespace Book_Keep.Migrations
                     b.ToTable("ShelfSlot");
                 });
 
+            modelBuilder.Entity("Book_Keep.Models.Role", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Removed")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Role");
+                });
+
             modelBuilder.Entity("Book_Keep.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -262,6 +285,9 @@ namespace Book_Keep.Migrations
                     b.Property<bool>("Removed")
                         .HasColumnType("bit");
 
+                    b.Property<int>("Roleid")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("UpdatedOn")
                         .HasColumnType("datetime2");
 
@@ -273,7 +299,24 @@ namespace Book_Keep.Migrations
 
                     b.HasIndex("Departmentid");
 
+                    b.HasIndex("Roleid");
+
                     b.ToTable("User");
+                });
+
+            modelBuilder.Entity("Book_Keep.Models.UserRole", b =>
+                {
+                    b.Property<int>("Userid")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Roleid")
+                        .HasColumnType("int");
+
+                    b.HasKey("Userid", "Roleid");
+
+                    b.HasIndex("Roleid");
+
+                    b.ToTable("UserRole");
                 });
 
             modelBuilder.Entity("Book_Keep.Models.Library.Book", b =>
@@ -325,10 +368,37 @@ namespace Book_Keep.Migrations
                     b.HasOne("Book_Keep.Models.Department", "Department")
                         .WithMany("User")
                         .HasForeignKey("Departmentid")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Book_Keep.Models.Role", "Role")
+                        .WithMany("User")
+                        .HasForeignKey("Roleid")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Department");
+
+                    b.Navigation("Role");
+                });
+
+            modelBuilder.Entity("Book_Keep.Models.UserRole", b =>
+                {
+                    b.HasOne("Book_Keep.Models.Role", "Role")
+                        .WithMany("UserRole")
+                        .HasForeignKey("Roleid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Book_Keep.Models.User", "User")
+                        .WithMany("UserRole")
+                        .HasForeignKey("Userid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Book_Keep.Models.Department", b =>
@@ -354,6 +424,18 @@ namespace Book_Keep.Migrations
             modelBuilder.Entity("Book_Keep.Models.Library.ShelfSlot", b =>
                 {
                     b.Navigation("Book");
+                });
+
+            modelBuilder.Entity("Book_Keep.Models.Role", b =>
+                {
+                    b.Navigation("User");
+
+                    b.Navigation("UserRole");
+                });
+
+            modelBuilder.Entity("Book_Keep.Models.User", b =>
+                {
+                    b.Navigation("UserRole");
                 });
 #pragma warning restore 612, 618
         }

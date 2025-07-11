@@ -13,19 +13,19 @@ namespace Book_Keep.Services.Library
         {
             _query = query;
         }
-        
+        // [HttpGet("sections/list")]
         public async Task<List<SectionResponse>> sectionslist(string? searchTerm = null)
         {
             var sections = await _query.sectionslist(searchTerm);
             return _mapper.Map<List<SectionResponse>>(sections);
         }
-
+        // [HttpGet("section/{id}")]
         public async Task<SectionResponse> getsection(int id)
         {
             var section = await getsectionid(id);
             return _mapper.Map<SectionResponse>(section);
         }
-
+        // [HttpPost("section")]
         public async Task<SectionResponse> createsection(SectionRequest request)
         {
             var section = _mapper.Map<Section>(request);
@@ -35,7 +35,7 @@ namespace Book_Keep.Services.Library
 
             return await sectionResponse(section.Id);   
         }
-
+        // [HttpPatch("section/update/{id}")]
         public async Task<SectionResponse> updatesection(SectionRequest request, int id)
         {
             var section = await patchsectionid(id);
@@ -46,7 +46,7 @@ namespace Book_Keep.Services.Library
 
             return await sectionResponse(section.Id);
         }
-
+        // [HttpPatch("section/hide/{id}")]
         public async Task<SectionResponse> removesection(int id)
         {
             var section = await patchsectionid(id);
@@ -58,7 +58,7 @@ namespace Book_Keep.Services.Library
 
             return await sectionResponse(section.Id);
         }
-
+        // [HttpDelete("section/delete/{id}")]
         public async Task<SectionResponse> deletesection(int id)
         {
             var section = await patchsectionid(id);

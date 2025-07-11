@@ -14,7 +14,7 @@ namespace Book_Keep.Controllers
         {
             _service = service;
         }
-
+        // Fetch all list of departments with optional filter for department name
         [HttpGet("departments/list")]
         public async Task<ActionResult<List<DepartmentResponse>>> departmentslist(string? searchTerm = null)
         {
@@ -27,7 +27,7 @@ namespace Book_Keep.Controllers
                 return HandleException(e);
             }
         }
-
+        // Fetch specific department
         [HttpGet("department/{id}")]
         public async Task<ActionResult<DepartmentResponse>> getdepartment(int id)
         {
@@ -40,7 +40,7 @@ namespace Book_Keep.Controllers
                 return HandleException(e);
             }
         }
-
+        // Create new department 
         [HttpPost("department")]
         public async Task<ActionResult<DepartmentResponse>> createdepartment([FromBody] DepartmentRequest request)
         {
@@ -53,7 +53,7 @@ namespace Book_Keep.Controllers
                 return HandleException(e);
             }
         }
-
+        // Update specific department
         [HttpPatch("department/update/{id}")]
         public async Task<ActionResult<DepartmentResponse>> updatedepartment([FromBody] DepartmentRequest request, int id)
         {
@@ -66,7 +66,7 @@ namespace Book_Keep.Controllers
                 return HandleException(e);
             }
         }
-
+        // Remove specific department without remove in database (Soft delete)
         [HttpPatch("department/hide/{id}")]
         public async Task<ActionResult<DepartmentResponse>> removedepartment(int id)
         {
@@ -79,7 +79,7 @@ namespace Book_Keep.Controllers
                 return HandleException(e);
             }
         }
-
+        // Delete specific department in database 
         [HttpDelete("department/delete/{id}")]
         public async Task<ActionResult<DepartmentResponse>> deletedepartment(int id)
         {

@@ -443,15 +443,6 @@ C:\Users\James\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\refint\Book Keep.dll
 C:\Users\James\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.pdb
 C:\Users\James\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.genruntimeconfig.cache
 C:\Users\James\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\ref\Book Keep.dll
-C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.csproj.AssemblyReference.cache
-C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.AssemblyInfoInputs.cache
-C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.AssemblyInfo.cs
-C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.csproj.CoreCompileInputs.cache
-C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.sourcelink.json
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\bin\Debug\net8.0\appsettings.json
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\bin\Debug\net8.0\Book Keep.staticwebassets.endpoints.json
@@ -464,6 +455,7 @@ C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\bin\Debug\net8.0\ClosedXML.dll
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\bin\Debug\net8.0\ClosedXML.Parser.dll
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
@@ -579,6 +571,15 @@ C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\bin\Debug\net8.0\runtimes\win\lib
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.csproj.AssemblyReference.cache
+C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.AssemblyInfoInputs.cache
+C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.AssemblyInfo.cs
+C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.csproj.CoreCompileInputs.cache
+C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.sourcelink.json
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -593,5 +594,4 @@ C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\refint\Book Keep
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.pdb
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\Book Keep.genruntimeconfig.cache
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\ref\Book Keep.dll
-C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\jatabilog\Source\Repos\Book-Keep-Api-\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

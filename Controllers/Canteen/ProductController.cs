@@ -15,6 +15,7 @@ namespace Book_Keep.Controllers.Canteen
         {
             _service = service;
         }
+        // Fetch all products with optional filter for product name (Paginated) 
         [HttpGet("products/paginated")]
         public async Task<ActionResult<Pagination<ProductResponse>>> paginatedproducts(
             [FromQuery] int pageNumber = 1,
@@ -30,7 +31,7 @@ namespace Book_Keep.Controllers.Canteen
                 return HandleException(e);
             }
         }
-
+        // Fetch all products with optional filter for product name (List)
         [HttpGet("products/list")]
         public async Task<ActionResult<List<ProductResponse>>> productslist(string? searchTerm = null)
         {
@@ -43,7 +44,7 @@ namespace Book_Keep.Controllers.Canteen
                 return HandleException(e);
             }
         }
-
+        // Fetch specific product
         [HttpGet("product/{id}")]
         public async Task<ActionResult<ProductResponse>> getproduct(int id)
         {
@@ -56,7 +57,7 @@ namespace Book_Keep.Controllers.Canteen
                 return HandleException(e);
             }
         }
-
+        // Create new product
         [HttpPost("product")]
         public async Task<ActionResult<ProductResponse>> createproduct([FromBody] ProductRequest request)
         {
@@ -69,7 +70,7 @@ namespace Book_Keep.Controllers.Canteen
                 return HandleException(e);  
             }
         }
-
+        // Update specific product
         [HttpPatch("product/update/{id}")]
         public async Task<ActionResult<ProductResponse>> updateproduct([FromBody] ProductRequest request, int id)
         {
@@ -82,7 +83,7 @@ namespace Book_Keep.Controllers.Canteen
                 return HandleException(e);
             }
         }
-
+        // Toggle active status for specific product
         [HttpPatch("product/toggle-status")]
         public async Task<ActionResult<ProductResponse>> togglestatus(int id)
         {
@@ -95,7 +96,7 @@ namespace Book_Keep.Controllers.Canteen
                 return HandleException(e);
             }
         }
-
+        // Remove specific product without deleting in database (Soft Delete)
         [HttpPatch("product/hide/{id}")]
         public async Task<ActionResult<ProductResponse>> hideproduct(int id)
         {
@@ -108,7 +109,7 @@ namespace Book_Keep.Controllers.Canteen
                 return HandleException(e);
             }
         }
-
+        // Delete specific product in database
         [HttpDelete("product/delete/{id}")]
         public async Task<ActionResult<ProductResponse>> deleteproduct(int id)
         {

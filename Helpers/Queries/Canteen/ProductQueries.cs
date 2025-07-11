@@ -11,7 +11,7 @@ namespace Book_Keep.Helpers.Queries.Canteen
         {
             _context = context;
         }
-
+        // Query for fetching all paginated products with optional filter for product name
         public IQueryable<Product> paginatedproducts(string? searchTerm = null)
         {
             var query = _context.Product
@@ -27,7 +27,7 @@ namespace Book_Keep.Helpers.Queries.Canteen
 
             return query;
         }
-
+        // Query for fetching all listed products with optional filter for product name
         public async Task<List<Product>> productslist(string? searchTerm = null)
         {
             if (!string.IsNullOrWhiteSpace(searchTerm))
@@ -47,14 +47,14 @@ namespace Book_Keep.Helpers.Queries.Canteen
                     .ToListAsync();
             }
         }
-
+        // Query for fetching specific product for GET method
         public async Task<Product?> getproductid(int id)
         {
             return await _context.Product
                 .AsNoTracking()
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
-        
+        // Query for fetching specific product for PATCH/PUT/DELETE methods
         public async Task<Product?> patchproductid(int id)
         {
             return await _context.Product

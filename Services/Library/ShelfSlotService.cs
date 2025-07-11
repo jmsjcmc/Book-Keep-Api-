@@ -13,19 +13,19 @@ namespace Book_Keep.Services.Library
         {
             _query = query;
         }
-
+        // [HttpGet("shelf-slots/list")]
         public async Task<List<ShelfSlotResponse>> shelfslotslist(string? searchTerm = null)
         {
             var slots = await _query.shelfslotslist(searchTerm);
             return _mapper.Map<List<ShelfSlotResponse>>(slots);
         }
-
+        // [HttpGet("shelf-slot/{id}")]
         public async Task<ShelfSlotResponse> getshelfslot(int id)
         {
             var slot = await getshelfslotid(id);
             return _mapper.Map<ShelfSlotResponse>(slot);
         }
-
+        // [HttpPost("shelf-slot")]
         public async Task<ShelfSlotResponse> createshelfslot(ShelfSlotRequest request)
         {
             var slot = _mapper.Map<ShelfSlot>(request);
@@ -35,7 +35,7 @@ namespace Book_Keep.Services.Library
 
             return await shelfslotResponse(slot.Id);
         }
-
+        // [HttpPatch("shelf-slot/update/{id}")]
         public async Task<ShelfSlotResponse> updateshelfslot(ShelfSlotRequest request, int id)
         {
             var slot = await patchshelfslotid(id);
@@ -47,7 +47,7 @@ namespace Book_Keep.Services.Library
 
             return await shelfslotResponse(slot.Id);
         }
-
+        // [HttpPatch("shelf-slot/hide/{id}")]
         public async Task<ShelfSlotResponse> removeshelfslot(int id)
         {
             var slot = await patchshelfslotid(id);
@@ -59,7 +59,7 @@ namespace Book_Keep.Services.Library
 
             return await shelfslotResponse(slot.Id);
         }
-
+        // [HttpDelete("shelf-slot/delete/{id}")]
         public async Task<ShelfSlotResponse> deleteshelfslot(int id)
         {
             var slot = await patchshelfslotid(id);
@@ -69,6 +69,7 @@ namespace Book_Keep.Services.Library
 
             return await shelfslotResponse(slot.Id);
         }
+        // Helpers
         private async Task<ShelfSlot?> getshelfslotid(int id)
         {
             return await _query.getshelfslotid(id);

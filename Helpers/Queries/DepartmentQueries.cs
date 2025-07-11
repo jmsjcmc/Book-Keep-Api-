@@ -10,7 +10,7 @@ namespace Book_Keep.Helpers.Queries
         {
             _context = context;
         }
-        
+        // Query for fetching all departments list with optional filter for product name
         public async Task<List<Department>> departmentslist(string? searchTerm = null)
         {
             if (!string.IsNullOrWhiteSpace(searchTerm))
@@ -31,7 +31,7 @@ namespace Book_Keep.Helpers.Queries
                   .ToListAsync();
             }
         }
-
+        // Query for fetching specific department for GET method
         public async Task<Department?> getdepartmentid(int id)
         {
             return await _context.Department
@@ -39,7 +39,7 @@ namespace Book_Keep.Helpers.Queries
                 .Include(d => d.User)
                 .FirstOrDefaultAsync(d => d.Id == id);
         }
-
+        // Query for fetching specific deparment for PATCH/PUT/DELETE methods
         public async Task<Department?> patchdepartmentid(int id)
         {
             return await _context.Department

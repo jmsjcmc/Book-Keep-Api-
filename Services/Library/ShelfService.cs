@@ -13,19 +13,19 @@ namespace Book_Keep.Services.Library
         {
             _query = query;
         }
-
+        // [HttpGet("shelves/list")]
         public async Task<List<ShelfResponse>> shelveslist(string? searchTerm = null)
         {
             var shelves = await _query.shelveslist(searchTerm);
             return _mapper.Map<List<ShelfResponse>>(shelves);
         }
-
+        // [HttpGet("shelve/{id}")]
         public async Task<ShelfResponse> getshelve(int id)
         {
             var shelve = await getshelfid(id);
             return _mapper.Map<ShelfResponse>(shelve);
         }
-
+        // [HttpPost("shelve")]
         public async Task<ShelfResponse> createshelve(ShelfRequest request)
         {
             var shelve = _mapper.Map<Shelf>(request);   
@@ -35,7 +35,7 @@ namespace Book_Keep.Services.Library
 
             return await shelfResponse(shelve.Id);
         }
-
+        // [HttpPatch("shelve/update/{id}")]
         public async Task<ShelfResponse> updateshelve(ShelfRequest request, int id)
         {
             var shelve = await patchshelfid(id);
@@ -46,7 +46,7 @@ namespace Book_Keep.Services.Library
 
             return await shelfResponse(shelve.Id);
         }
-
+        // [HttpPatch("shelve/hide/{id}")]
         public async Task<ShelfResponse> removeshelve(int id)
         {
             var shelve = await patchshelfid(id);
@@ -58,7 +58,7 @@ namespace Book_Keep.Services.Library
 
             return await shelfResponse(shelve.Id);
         }
-
+        // [HttpDelete("shelve/delete/{id}")]
         public async Task<ShelfResponse> deleteshelve(int id)
         {
             var shelve = await patchshelfid(id);
@@ -68,6 +68,7 @@ namespace Book_Keep.Services.Library
 
             return await shelfResponse(shelve.Id);
         }
+        // Helpers
         private async Task<Shelf?> getshelfid(int id)
         {
             return await _query.getshelfid(id);

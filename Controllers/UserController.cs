@@ -14,7 +14,7 @@ namespace Book_Keep.Controllers
         {
             _service = service;
         }
-
+        // Fetch all paginated users with optional filter for firstname & lastname
         [HttpGet("users/paginated")]
         public async Task<ActionResult<Pagination<UserWithDepartmentResponse>>> paginatedusers(
             [FromQuery] int pageNumber = 1,
@@ -30,7 +30,7 @@ namespace Book_Keep.Controllers
                 return HandleException(e);
             }
         }
-
+        // Fetch all listed users with optional filter for firstname & lastname
         [HttpGet("users/list")]
         public async Task<ActionResult<List<UserWithDepartmentResponse>>> userslist(string? searchTerm = null)
         {
@@ -43,7 +43,7 @@ namespace Book_Keep.Controllers
                 return HandleException(e);
             }
         }
-
+        // Fetch specific user
         [HttpGet("user/{id}")]
         public async Task<ActionResult<UserWithDepartmentResponse>> getuser(int id)
         {
@@ -56,7 +56,7 @@ namespace Book_Keep.Controllers
                 return HandleException(e);
             }
         }
-
+        // Fetch authenticated user details
         [HttpGet("user-detail")]
         public async Task<ActionResult<UserResponse>> userdetail()
         {
@@ -69,7 +69,7 @@ namespace Book_Keep.Controllers
                 return HandleException(e);
             }
         }
-
+        // User login
         [HttpPost("login")]
         public async Task<ActionResult> login([FromBody] Login request)
         {
@@ -82,6 +82,7 @@ namespace Book_Keep.Controllers
                 return HandleException(e);
             }
         }
+        // Create new user
         [HttpPost("user")]
         public async Task<ActionResult<UserWithDepartmentResponse>> createuser([FromBody] UserRequest request)
         {
@@ -94,7 +95,7 @@ namespace Book_Keep.Controllers
                 return HandleException(e);
             }
         }
-
+        // Update specific user 
         [HttpPatch("user/update/{id}")]
         public async Task<ActionResult<UserWithDepartmentResponse>> updateuser([FromBody] UserRequest request, int id)
         {
@@ -107,7 +108,7 @@ namespace Book_Keep.Controllers
                 return HandleException(e);
             }
         }
-
+        // Remove specific user without removing in database (Soft delete)
         [HttpPatch("user/hide/{id}")]
         public async Task<ActionResult<UserWithDepartmentResponse>> removeuser(int id)
         {
@@ -120,7 +121,7 @@ namespace Book_Keep.Controllers
                 return HandleException(e);
             }
         }
-
+        // Delete specific user in database 
         [HttpDelete("user/delete/{id}")]
         public async Task<ActionResult<UserWithDepartmentResponse>> deleteuser(int id)
         {

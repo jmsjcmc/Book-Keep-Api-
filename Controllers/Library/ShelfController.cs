@@ -14,7 +14,7 @@ namespace Book_Keep.Controllers.Library
         {
             _service = service;
         }
-
+        // Fetch all shelves list with optional filter for shelve label
         [HttpGet("shelves/list")]
         public async Task<ActionResult<List<ShelfResponse>>> shelveslist(string? searchTerm = null)
         {
@@ -28,7 +28,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Fetch specific shelve
         [HttpGet("shelve/{id}")]
         public async Task<ActionResult<ShelfResponse>> getshelve(int id)
         {
@@ -41,7 +41,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Create new shelve
         [HttpPost("shelve")]
         public async Task<ActionResult<ShelfResponse>> createshelve([FromBody] ShelfRequest request)
         {
@@ -55,7 +55,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Update specific shelve
         [HttpPatch("shelve/update/{id}")]
         public async Task<ActionResult<ShelfResponse>> updateshelve([FromBody] ShelfRequest request, int id)
         {
@@ -68,7 +68,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Remove specific shelve without removing in database (Soft delete)
         [HttpPatch("shelve/hide/{id}")]
         public async Task<ActionResult<ShelfResponse>> removeshelve(int id)
         {
@@ -81,7 +81,7 @@ namespace Book_Keep.Controllers.Library
                 return HandleException(e);
             }
         }
-
+        // Delete specific shelve in database
         [HttpDelete("shelve/delete/{id}")]
         public async Task<ActionResult<ShelfResponse>> deleteshelve(int id)
         {
