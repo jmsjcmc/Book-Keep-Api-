@@ -14,72 +14,72 @@ namespace Book_Keep.Services.Library
             _query = query;
         }
         // [HttpGet("sections/list")]
-        public async Task<List<SectionResponse>> sectionslist(string? searchTerm = null)
+        public async Task<List<SectionResponse>> SectionsList(string? searchTerm = null)
         {
             var sections = await _query.sectionslist(searchTerm);
             return _mapper.Map<List<SectionResponse>>(sections);
         }
         // [HttpGet("section/{id}")]
-        public async Task<SectionResponse> getsection(int id)
+        public async Task<SectionResponse> GetSection(int id)
         {
-            var section = await getsectionid(id);
+            var section = await GetSectionId(id);
             return _mapper.Map<SectionResponse>(section);
         }
         // [HttpPost("section")]
-        public async Task<SectionResponse> createsection(SectionRequest request)
+        public async Task<SectionResponse> CreateSection(SectionRequest request)
         {
             var section = _mapper.Map<Section>(request);
 
             _context.Section.Add(section);
             await _context.SaveChangesAsync();
 
-            return await sectionResponse(section.Id);   
+            return await SectionResponse(section.Id);   
         }
         // [HttpPatch("section/update/{id}")]
-        public async Task<SectionResponse> updatesection(SectionRequest request, int id)
+        public async Task<SectionResponse> UpdateSection(SectionRequest request, int id)
         {
-            var section = await patchsectionid(id);
+            var section = await PatchSectionId(id);
 
             _mapper.Map(request, section);
 
             await _context.SaveChangesAsync();
 
-            return await sectionResponse(section.Id);
+            return await SectionResponse(section.Id);
         }
         // [HttpPatch("section/hide/{id}")]
-        public async Task<SectionResponse> removesection(int id)
+        public async Task<SectionResponse> RemoveSection(int id)
         {
-            var section = await patchsectionid(id);
+            var section = await PatchSectionId(id);
 
             section.Removed = true;
 
             _context.Section.Update(section);
             await _context.SaveChangesAsync();
 
-            return await sectionResponse(section.Id);
+            return await SectionResponse(section.Id);
         }
         // [HttpDelete("section/delete/{id}")]
-        public async Task<SectionResponse> deletesection(int id)
+        public async Task<SectionResponse> DeleteSection(int id)
         {
-            var section = await patchsectionid(id);
+            var section = await PatchSectionId(id);
 
             _context.Section.Remove(section);
             await _context.SaveChangesAsync();
 
-            return await sectionResponse(section.Id);
+            return await SectionResponse(section.Id);
         }
         // Helpers
-        private async Task<Section?> getsectionid(int id)
+        private async Task<Section?> GetSectionId(int id)
         {
             return await _query.getsectionid(id);
         }
-        private async Task<Section?> patchsectionid(int id)
+        private async Task<Section?> PatchSectionId(int id)
         {
             return await _query.patchsectionid(id);
         }
-        private async Task<SectionResponse> sectionResponse(int id)
+        private async Task<SectionResponse> SectionResponse(int id)
         {
-            var response = await getsectionid(id);
+            var response = await GetSectionId(id);
             return _mapper.Map<SectionResponse>(response);
         }
     }

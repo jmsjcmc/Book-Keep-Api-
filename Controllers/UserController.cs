@@ -16,7 +16,7 @@ namespace Book_Keep.Controllers
         }
         // Fetch all paginated users with optional filter for firstname & lastname
         [HttpGet("users/paginated")]
-        public async Task<ActionResult<Pagination<UserWithDepartmentResponse>>> paginatedusers(
+        public async Task<ActionResult<Pagination<UserWithDepartmentResponse>>> PaginatedUsers(
             [FromQuery] int pageNumber = 1,
             [FromQuery] int pageSize = 10,
             [FromQuery] string? searchTerm = null)
@@ -32,7 +32,7 @@ namespace Book_Keep.Controllers
         }
         // Fetch all listed users with optional filter for firstname & lastname
         [HttpGet("users/list")]
-        public async Task<ActionResult<List<UserWithDepartmentResponse>>> userslist(string? searchTerm = null)
+        public async Task<ActionResult<List<UserWithDepartmentResponse>>> UsersList(string? searchTerm = null)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace Book_Keep.Controllers
         }
         // Fetch specific user
         [HttpGet("user/{id}")]
-        public async Task<ActionResult<UserWithDepartmentResponse>> getuser(int id)
+        public async Task<ActionResult<UserWithDepartmentResponse>> GetUser(int id)
         {
             try
             {
@@ -58,7 +58,7 @@ namespace Book_Keep.Controllers
         }
         // Fetch authenticated user details
         [HttpGet("user-detail")]
-        public async Task<ActionResult<UserResponse>> userdetail()
+        public async Task<ActionResult<UserResponse>> UserDetail()
         {
             try
             {
@@ -71,7 +71,7 @@ namespace Book_Keep.Controllers
         }
         // User login
         [HttpPost("login")]
-        public async Task<ActionResult> login([FromBody] Login request)
+        public async Task<ActionResult> Login([FromBody] Login request)
         {
             try
             {
@@ -84,7 +84,7 @@ namespace Book_Keep.Controllers
         }
         // Create new user
         [HttpPost("user")]
-        public async Task<ActionResult<UserWithDepartmentResponse>> createuser([FromBody] UserRequest request)
+        public async Task<ActionResult<UserWithDepartmentResponse>> CreateUser([FromBody] UserRequest request)
         {
             try
             {
@@ -97,7 +97,7 @@ namespace Book_Keep.Controllers
         }
         // Update specific user 
         [HttpPatch("user/update/{id}")]
-        public async Task<ActionResult<UserWithDepartmentResponse>> updateuser([FromBody] UserRequest request, int id)
+        public async Task<ActionResult<UserWithDepartmentResponse>> UpdateUser([FromBody] UserRequest request, int id)
         {
             try
             {
@@ -110,7 +110,7 @@ namespace Book_Keep.Controllers
         }
         // Remove specific user without removing in database (Soft delete)
         [HttpPatch("user/hide/{id}")]
-        public async Task<ActionResult<UserWithDepartmentResponse>> removeuser(int id)
+        public async Task<ActionResult<UserWithDepartmentResponse>> RemoveUser(int id)
         {
             try
             {
@@ -123,7 +123,7 @@ namespace Book_Keep.Controllers
         }
         // Delete specific user in database 
         [HttpDelete("user/delete/{id}")]
-        public async Task<ActionResult<UserWithDepartmentResponse>> deleteuser(int id)
+        public async Task<ActionResult<UserWithDepartmentResponse>> DeleteUser(int id)
         {
             try
             {

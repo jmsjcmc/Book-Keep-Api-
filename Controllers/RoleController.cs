@@ -15,7 +15,7 @@ namespace Book_Keep.Controllers
         }
         // Fetch all list of roles with optional filter for role name
         [HttpGet("roles/list")]
-        public async Task<ActionResult<List<RoleResponse>>> roleslist(string? searchTerm = null)
+        public async Task<ActionResult<List<RoleResponse>>> RolesList(string? searchTerm = null)
         {
             try
             {
@@ -28,7 +28,7 @@ namespace Book_Keep.Controllers
         }
         // Fetch specific role
         [HttpGet("role/{id}")]
-        public async Task<ActionResult<RoleResponse>> getrole(int id)
+        public async Task<ActionResult<RoleResponse>> GetRole(int id)
         {
             try
             {
@@ -41,7 +41,7 @@ namespace Book_Keep.Controllers
         }
         // Create new role
         [HttpPost("role")]
-        public async Task<ActionResult<RoleResponse>> createrole([FromBody] RoleRequest request)
+        public async Task<ActionResult<RoleResponse>> CreateRole([FromBody] RoleRequest request)
         {
             try
             {
@@ -54,7 +54,7 @@ namespace Book_Keep.Controllers
         }
         // Update specific role 
         [HttpPatch("role/update/{id}")]
-        public async Task<ActionResult<RoleResponse>> updaterole([FromBody] RoleRequest request, int id)
+        public async Task<ActionResult<RoleResponse>> UpdateRole([FromBody] RoleRequest request, int id)
         {
             try
             {
@@ -67,7 +67,7 @@ namespace Book_Keep.Controllers
         }
         // Toggle active status for specific role
         [HttpPatch("role/toggle-status")]
-        public async Task<ActionResult<RoleResponse>> togglestatus(int id)
+        public async Task<ActionResult<RoleResponse>> ToggleStatus(int id)
         {
             try
             {
@@ -80,7 +80,7 @@ namespace Book_Keep.Controllers
         }
         // Remove specific role without deleting in database 
         [HttpPatch("role/hide/{id}")]
-        public async Task<ActionResult<RoleResponse>>  removerole(int id)
+        public async Task<ActionResult<RoleResponse>>  RemoveRole(int id)
         {
             try
             {
@@ -93,7 +93,7 @@ namespace Book_Keep.Controllers
         }
         // Delete specific role in database
         [HttpDelete("role/delete/{id}")]
-        public async Task<ActionResult<RoleResponse>> deleterole(int id)
+        public async Task<ActionResult<RoleResponse>> DeleteRole(int id)
         {
             try
             {

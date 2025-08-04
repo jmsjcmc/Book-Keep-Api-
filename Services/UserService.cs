@@ -23,7 +23,7 @@ namespace Book_Keep.Services
             _authHelper = authHelper;
         }
         // [HttpGet("users/paginated")]
-        public async Task<Pagination<UserWithDepartmentResponse>> paginatedusers(
+        public async Task<Pagination<UserWithDepartmentResponse>> PaginatedUsers(
             int pageNumber = 1,
             int pageSize = 10,
             string? searchTerm = null)
@@ -32,27 +32,27 @@ namespace Book_Keep.Services
             return await PaginationHelper.paginateandmap<User, UserWithDepartmentResponse>(query, pageNumber, pageSize, _mapper);
         }
         // [HttpGet("users/list")]
-        public async Task<List<UserWithDepartmentResponse>> userslist(string? searchTerm = null)
+        public async Task<List<UserWithDepartmentResponse>> UsersList(string? searchTerm = null)
         {
             var users = await _query.userslist(searchTerm);
             return _mapper.Map<List<UserWithDepartmentResponse>>(users);
         }
         // [HttpGet("user/{id}")]
-        public async Task<UserWithDepartmentResponse> getuser(int id)
+        public async Task<UserWithDepartmentResponse> GetUser(int id)
         {
-            var user = await getuserid(id);
+            var user = await GetUserId(id);
             return _mapper.Map<UserWithDepartmentResponse>(user);
         }
         // [HttpGet("user-detail")]
-        public async Task<UserResponse> getuserdetail(ClaimsPrincipal detail)
+        public async Task<UserResponse> GetUserDetail(ClaimsPrincipal detail)
         {
             int userId = UserValidator.ValidateUserClaim(detail);
-            var user = await getuserid(userId);
+            var user = await GetUserId(userId);
 
             return _mapper.Map<UserResponse>(user);
         }
         // [HttpPost("login")]
-        public async Task<object> userlogin(Login request)
+        public async Task<object> UserLogin(Login request)
         {
             await _validator.ValidateLoginRequest(request);
 
@@ -66,14 +66,13 @@ namespace Book_Keep.Services
                 AccessToken = accessToken
             };
         }
-
-        public async Task<UserRoleResponse> assignrole(UserRoleRequest request)
-        {
-            var user = await ValidateUser(request.Userid);
-            var role = await ValidateRole(request.Roleid);
-        }
+        //public async Task<UserRoleResponse> assignrole(UserRoleRequest request)
+        //{
+        //    var user = await ValidateUser(request.Userid);
+        //    var role = await ValidateRole(request.Roleid);
+        //}
         // [HttpPost("user")]
-        public async Task<UserWithDepartmentResponse> createuser(UserRequest request)
+        public async Task<UserWithDepartmentResponse> CreateUser(UserRequest request)
         {
             var user = _mapper.Map<User>(request);
             user.Password = BCrypt.Net.BCrypt.HashPassword(request.Password);
@@ -82,68 +81,68 @@ namespace Book_Keep.Services
             _context.User.Add(user);
             await _context.SaveChangesAsync();
 
-            return await userResponse(user.Id);
+            return await UserResponse(user.Id);
         }
         // [HttpPatch("user/update/{id}")]
-        public async Task<UserWithDepartmentResponse> updateuser(UserRequest request, int id)
+        public async Task<UserWithDepartmentResponse> UpdateUser(UserRequest request, int id)
         {
-            var user = await patchuserid(id);
+            var user = await PatchUserId(id);
 
             _mapper.Map(request, user);
             user.Password = BCrypt.Net.BCrypt.HashPassword(request.Password);
 
             await _context.SaveChangesAsync();
 
-            return await userResponse(user.Id);
+            return await UserResponse(user.Id);
         }
         // [HttpPatch("user/hide/{id}")]
-        public async Task<UserWithDepartmentResponse> removeuser(int id)
+        public async Task<UserWithDepartmentResponse> RemoveUser(int id)
         {
-            var user = await patchuserid(id);
+            var user = await PatchUserId(id);
 
             user.Removed = true;
 
             _context.User.Update(user);
             await _context.SaveChangesAsync();
 
-            return await userResponse(user.Id);
+            return await UserResponse(user.Id);
         }
         // [HttpDelete("user/delete/{id}")]
-        public async Task<UserWithDepartmentResponse> deleteuser(int id)
+        public async Task<UserWithDepartmentResponse> DeleteUser(int id)
         {
-            var user = await patchuserid(id);
+            var user = await PatchUserId(id);
 
             _context.User.Remove(user);
             await _context.SaveChangesAsync();
 
-            return await userResponse(user.Id);
+            return await UserResponse(user.Id);
         }
         // Helpers
-        private async Task<User?> patchuserid(int id)
+        private async Task<User?> PatchUserId(int id)
         {
             return await _query.patchuserid(id);
         }
-        private async Task<User?> getuserid(int id)
+        private async Task<User?> GetUserId(int id)
         {
             return await _query.getuserid(id);
         }
-        private async Task<Role?> patchroleid(int id)
+        private async Task<Role?> PatchRoleId(int id)
         {
             return await _roleQuery.patchroleid(id);
         }
-        private async Task<Role?> getroleid(int id)
+        private async Task<Role?> GetRoleId(int id)
         {
             return await _roleQuery.getroleid(id);
         }
-        private async Task<UserWithDepartmentResponse> userResponse(int id)
+        private async Task<UserWithDepartmentResponse> UserResponse(int id)
         {
-            var user = await getuserid(id);
+            var user = await GetUserId(id);
             return _mapper.Map<UserWithDepartmentResponse>(user);
         }
         // Validators
         private async Task<User> ValidateUser(int id)
         {
-            var user = await patchuserid(id);
+            var user = await PatchUserId(id);
 
             if (user == null)
             {
@@ -154,7 +153,7 @@ namespace Book_Keep.Services
         }
         private async Task<Role> ValidateRole(int id)
         {
-            var role = await patchroleid(id);
+            var role = await PatchRoleId(id);
 
             if (role == null)
             {

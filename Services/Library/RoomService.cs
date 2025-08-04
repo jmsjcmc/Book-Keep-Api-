@@ -14,72 +14,72 @@ namespace Book_Keep.Services.Library
             _query = query;
         }
         // [HttpGet("rooms/list")]
-        public async Task<List<RoomResponse>> roomslist(string? searchTerm = null)
+        public async Task<List<RoomResponse>> RoomsList(string? searchTerm = null)
         {
             var rooms = await _query.roomslist(searchTerm);
             return _mapper.Map<List<RoomResponse>>(rooms);
         }
         // [HttpGet("room/{id}")]
-        public async Task<RoomResponse> getroom(int id)
+        public async Task<RoomResponse> GetRoom(int id)
         {
-            var room = await getroomid(id);
+            var room = await GetRoomId(id);
             return _mapper.Map<RoomResponse>(room);
         }
         // [HttpPost("room")]
-        public async Task<RoomResponse> createroom(RoomRequest request)
+        public async Task<RoomResponse> CreateRoom(RoomRequest request)
         {
             var room = _mapper.Map<Room>(request);
 
             _context.Room.Add(room);
             await _context.SaveChangesAsync();  
 
-            return await roomResponse(room.Id);
+            return await RoomResponse(room.Id);
         }
         // [HttpPatch("room/update/{id}")]
-        public async Task<RoomResponse> updateroom(RoomRequest request, int id)
+        public async Task<RoomResponse> UpdateRoom(RoomRequest request, int id)
         {
-            var room = await patchroomid(id);
+            var room = await PatchRoomId(id);
 
             _mapper.Map(request, room); 
 
             await _context.SaveChangesAsync();
 
-            return await roomResponse(room.Id);
+            return await RoomResponse(room.Id);
         }
         // [HttpPatch("room/hide/{id}")]
-        public async Task<RoomResponse> removeroom(int id)
+        public async Task<RoomResponse> RemoveRoom(int id)
         {
-            var room = await patchroomid(id);
+            var room = await PatchRoomId(id);
 
             room.Removed = true;
 
             _context.Room.Update(room);
             await _context.SaveChangesAsync();
 
-            return await roomResponse(room.Id);
+            return await RoomResponse(room.Id);
         }
         // [HttpDelete("room/delete/{id}")]
-        public async Task<RoomResponse> deleteroom(int id)
+        public async Task<RoomResponse> DeleteRoom(int id)
         {
-            var room = await patchroomid(id);
+            var room = await PatchRoomId(id);
             
             _context.Room.Remove(room);
             await _context.SaveChangesAsync();
 
-            return await roomResponse(room.Id);
+            return await RoomResponse(room.Id);
         }
         // Helpers
-        private async Task<Room?> getroomid(int id)
+        private async Task<Room?> GetRoomId(int id)
         {
             return await _query.getroomid(id);
         }
-        private async Task<Room?> patchroomid(int id)
+        private async Task<Room?> PatchRoomId(int id)
         {
             return await _query.patchroomid(id);
         }
-        private async Task<RoomResponse> roomResponse(int id)
+        private async Task<RoomResponse> RoomResponse(int id)
         {
-            var response = await getroomid(id);
+            var response = await GetRoomId(id);
             return _mapper.Map<RoomResponse>(response);
         }
     }

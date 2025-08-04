@@ -4,12 +4,12 @@ namespace Book_Keep.Interfaces
 {
     public interface IRoleService
     {
-        Task<List<RoleResponse>> roleslist(string? searchTerm = null);
-        Task<RoleResponse> getrole(int id);
-        Task<RoleResponse> createrole(RoleRequest request);
-        Task<RoleResponse> updaterole(RoleRequest request, int id);
-        Task<RoleResponse> togglestatus(int id);
-        Task<RoleResponse> removerole(int id);
-        Task<RoleResponse> deleterole(int id);
+        Task<List<RoleResponse>> RolesList(string? searchTerm = null);
+        Task<RoleResponse> GetRole(int id);
+        Task<RoleResponse> CreateRole(RoleRequest request);
+        Task<RoleResponse> UpdateRole(RoleRequest request, int id);
+        Task<RoleResponse> ToggleStatus(int id);
+        Task<RoleResponse> RemoveRole(int id);
+        Task<RoleResponse> DeleteRole(int id);
     }
 }

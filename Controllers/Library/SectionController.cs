@@ -15,7 +15,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Fetch all sections list with optional filter for section name
         [HttpGet("sections/list")]
-        public async Task<ActionResult<List<SectionResponse>>> sectionslist(string? searchTerm = null)
+        public async Task<ActionResult<List<SectionResponse>>> SectionsList(string? searchTerm = null)
         {
             try
             {
@@ -28,7 +28,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Fetch specific section
         [HttpGet("section/{id}")]
-        public async Task<ActionResult<SectionResponse>> getsection(int id)
+        public async Task<ActionResult<SectionResponse>> GetSection(int id)
         {
             try
             {
@@ -41,7 +41,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Create new section
         [HttpPost("section")]
-        public async Task<ActionResult<SectionResponse>> createsection([FromBody] SectionRequest request)
+        public async Task<ActionResult<SectionResponse>> CreateSection([FromBody] SectionRequest request)
         {
             try
             {
@@ -54,7 +54,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Update specific section
         [HttpPatch("section/update/{id}")]
-        public async Task<ActionResult<SectionResponse>> updatesection([FromBody] SectionRequest request, int id)
+        public async Task<ActionResult<SectionResponse>> UpdateSection([FromBody] SectionRequest request, int id)
         {
             try
             {
@@ -67,7 +67,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Remove specific section without deleting in database (Soft delete)
         [HttpPatch("section/hide/{id}")]
-        public async Task<ActionResult<SectionResponse>> removesection(int id)
+        public async Task<ActionResult<SectionResponse>> RemoveSection(int id)
         {
             try
             {
@@ -80,7 +80,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Delete specific section in database
         [HttpDelete("section/delete/{id}")]
-        public async Task<ActionResult<SectionResponse>> deletesection(int id)
+        public async Task<ActionResult<SectionResponse>> DeleteSection(int id)
         {
             try
             {

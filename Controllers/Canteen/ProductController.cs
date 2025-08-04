@@ -17,7 +17,7 @@ namespace Book_Keep.Controllers.Canteen
         }
         // Fetch all products with optional filter for product name (Paginated) 
         [HttpGet("products/paginated")]
-        public async Task<ActionResult<Pagination<ProductResponse>>> paginatedproducts(
+        public async Task<ActionResult<Pagination<ProductResponse>>> PaginatedProducts(
             [FromQuery] int pageNumber = 1,
             [FromQuery] int pageSize = 10,
             [FromQuery] string? searchTerm = null)
@@ -33,7 +33,7 @@ namespace Book_Keep.Controllers.Canteen
         }
         // Fetch all products with optional filter for product name (List)
         [HttpGet("products/list")]
-        public async Task<ActionResult<List<ProductResponse>>> productslist(string? searchTerm = null)
+        public async Task<ActionResult<List<ProductResponse>>> ProductsList(string? searchTerm = null)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace Book_Keep.Controllers.Canteen
         }
         // Fetch specific product
         [HttpGet("product/{id}")]
-        public async Task<ActionResult<ProductResponse>> getproduct(int id)
+        public async Task<ActionResult<ProductResponse>> GetProduct(int id)
         {
             try
             {
@@ -59,7 +59,7 @@ namespace Book_Keep.Controllers.Canteen
         }
         // Create new product
         [HttpPost("product")]
-        public async Task<ActionResult<ProductResponse>> createproduct([FromBody] ProductRequest request)
+        public async Task<ActionResult<ProductResponse>> CreateProduct([FromBody] ProductRequest request)
         {
             try
             {
@@ -72,7 +72,7 @@ namespace Book_Keep.Controllers.Canteen
         }
         // Update specific product
         [HttpPatch("product/update/{id}")]
-        public async Task<ActionResult<ProductResponse>> updateproduct([FromBody] ProductRequest request, int id)
+        public async Task<ActionResult<ProductResponse>> UpdateProduct([FromBody] ProductRequest request, int id)
         {
             try
             {
@@ -85,7 +85,7 @@ namespace Book_Keep.Controllers.Canteen
         }
         // Toggle active status for specific product
         [HttpPatch("product/toggle-status")]
-        public async Task<ActionResult<ProductResponse>> togglestatus(int id)
+        public async Task<ActionResult<ProductResponse>> ToggleStatus(int id)
         {
             try
             {
@@ -98,7 +98,7 @@ namespace Book_Keep.Controllers.Canteen
         }
         // Remove specific product without deleting in database (Soft Delete)
         [HttpPatch("product/hide/{id}")]
-        public async Task<ActionResult<ProductResponse>> hideproduct(int id)
+        public async Task<ActionResult<ProductResponse>> HideProduct(int id)
         {
             try
             {
@@ -111,7 +111,7 @@ namespace Book_Keep.Controllers.Canteen
         }
         // Delete specific product in database
         [HttpDelete("product/delete/{id}")]
-        public async Task<ActionResult<ProductResponse>> deleteproduct(int id)
+        public async Task<ActionResult<ProductResponse>> DeleteProduct(int id)
         {
             try
             {

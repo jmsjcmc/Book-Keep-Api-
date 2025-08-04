@@ -5,14 +5,14 @@ namespace Book_Keep.Interfaces.Library
 {
     public interface IBookService
     {
-        Task<Pagination<BookResponse>> paginatedbooks(
+        Task<Pagination<BookResponse>> PaginatedBooks(
             int pageNumber = 1,
             int pageSize = 10,
             string? searchTerm = null);
-        Task<BookResponse> getbook(int id);
-        Task<BookResponse> createbook(BookRequest request);
-        Task<BookResponse> updatebook(BookRequest request, int id);
-        Task<BookResponse> togglehide(int id);
-        Task<BookResponse> deletebook(int id);
+        Task<BookResponse> GetBook(int id);
+        Task<BookResponse> CreateBook(BookRequest request);
+        Task<BookResponse> UpdateBook(BookRequest request, int id);
+        Task<BookResponse> ToggleHide(int id);
+        Task<BookResponse> DeleteBook(int id);
     }
 }

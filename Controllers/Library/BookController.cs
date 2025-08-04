@@ -20,7 +20,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Export books
         [HttpGet("books/export")]
-        public async Task<ActionResult> exportBooks()
+        public async Task<ActionResult> ExportBooks()
         {
             try
             {
@@ -37,7 +37,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Generate book template
         [HttpGet("books/template")]
-        public async Task<ActionResult> template()
+        public async Task<ActionResult> BooksTemplate()
         {
             try
             {
@@ -51,7 +51,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Fetch all books (paginated)
         [HttpGet("books/paginated")]
-        public async Task<ActionResult<Pagination<BookResponse>>> getBooks(
+        public async Task<ActionResult<Pagination<BookResponse>>> GetBooks(
             [FromQuery] int pageNumber = 1,
             [FromQuery] int pageSize = 10,
             [FromQuery] string? searchTerm = null)
@@ -68,7 +68,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Fetch specific book
         [HttpGet("book/{id}")]
-        public async Task<ActionResult<BookResponse>> getbook(int id)
+        public async Task<ActionResult<BookResponse>> GetBook(int id)
         {
             try
             {
@@ -81,7 +81,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Import all books
         [HttpPost("books/import")]
-        public async Task<ActionResult<List<BookResponse>>> importBooks(IFormFile file)
+        public async Task<ActionResult<List<BookResponse>>> ImportBooks(IFormFile file)
         {
             try
             {
@@ -98,7 +98,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Create book
         [HttpPost("book")]
-        public async Task<ActionResult<BookResponse>> createBook([FromBody] BookRequest request)
+        public async Task<ActionResult<BookResponse>> CreateBook([FromBody] BookRequest request)
         {
             try
             {
@@ -112,7 +112,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Update specific book
         [HttpPatch("book/update/{id}")]
-        public async Task<ActionResult<BookResponse>> updatebook([FromBody] BookRequest request, int id)
+        public async Task<ActionResult<BookResponse>> UpdateBook([FromBody] BookRequest request, int id)
         {
             try
             {
@@ -125,7 +125,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Hide specific book without removing in Database
         [HttpPatch("book/hide/{id}")]
-        public async Task<ActionResult<BookResponse>> toggleHidden(int id)
+        public async Task<ActionResult<BookResponse>> ToggleHidden(int id)
         {
             try
             {
@@ -138,7 +138,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Delete specific book in database
         [HttpDelete("book/delete/{id}")]
-        public async Task<ActionResult<BookResponse>> deletebook(int id)
+        public async Task<ActionResult<BookResponse>> DeleteBook(int id)
         {
             try
             {

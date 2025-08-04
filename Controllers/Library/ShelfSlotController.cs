@@ -16,7 +16,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Fetch all list of shelf slots with optional filter for row or column
         [HttpGet("shelf-slots/list")]
-        public async Task<ActionResult<List<ShelfSlotResponse>>> shelfslotslist(string? searchTerm = null)
+        public async Task<ActionResult<List<ShelfSlotResponse>>> ShelfSlotsList(string? searchTerm = null)
         {
             try
             {
@@ -29,7 +29,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Fetch specific shelf slot
         [HttpGet("shelf-slot/{id}")]
-        public async Task<ActionResult<ShelfSlotResponse>> getshelfslot(int id)
+        public async Task<ActionResult<ShelfSlotResponse>> GetShelfSlot(int id)
         {
             try
             {
@@ -42,7 +42,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Create new shelf slot
         [HttpPost("shelf-slot")]
-        public async Task<ActionResult<ShelfSlotResponse>> createshelfslot([FromBody] ShelfSlotRequest request)
+        public async Task<ActionResult<ShelfSlotResponse>> CreateShelfSlot([FromBody] ShelfSlotRequest request)
         {
             try
             {
@@ -55,7 +55,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Update specific shelf slot
         [HttpPatch("shelf-slot/update/{id}")]
-        public async Task<ActionResult<ShelfSlotResponse>> updateshelfslot([FromBody] ShelfSlotRequest request, int id)
+        public async Task<ActionResult<ShelfSlotResponse>> UpdateShelfSlot([FromBody] ShelfSlotRequest request, int id)
         {
             try
             {
@@ -68,7 +68,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Remove specific shelf slot without removing in database (Soft delete)
         [HttpPatch("shelf-slot/hide/{id}")]
-        public async Task<ActionResult<ShelfSlotResponse>> removeshelfslot(int id)
+        public async Task<ActionResult<ShelfSlotResponse>> RemoveShelfSlot(int id)
         {
             try
             {
@@ -81,7 +81,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Delete specific shelf slot in database
         [HttpDelete("shelf-slot/delete/{id}")]
-        public async Task<ActionResult<ShelfSlotResponse>> deleteshelfslot(int id)
+        public async Task<ActionResult<ShelfSlotResponse>> DeleteShelfSlot(int id)
         {
             try
             {

@@ -14,72 +14,72 @@ namespace Book_Keep.Services.Library
             _query = query;
         }
         // [HttpGet("shelves/list")]
-        public async Task<List<ShelfResponse>> shelveslist(string? searchTerm = null)
+        public async Task<List<ShelfResponse>> ShelvesList(string? searchTerm = null)
         {
             var shelves = await _query.shelveslist(searchTerm);
             return _mapper.Map<List<ShelfResponse>>(shelves);
         }
         // [HttpGet("shelve/{id}")]
-        public async Task<ShelfResponse> getshelve(int id)
+        public async Task<ShelfResponse> GetShelve(int id)
         {
-            var shelve = await getshelfid(id);
+            var shelve = await GetShelfId(id);
             return _mapper.Map<ShelfResponse>(shelve);
         }
         // [HttpPost("shelve")]
-        public async Task<ShelfResponse> createshelve(ShelfRequest request)
+        public async Task<ShelfResponse> CreateShelve(ShelfRequest request)
         {
             var shelve = _mapper.Map<Shelf>(request);   
 
             _context.Shelf.Add(shelve);
             await _context.SaveChangesAsync();
 
-            return await shelfResponse(shelve.Id);
+            return await ShelfResponse(shelve.Id);
         }
         // [HttpPatch("shelve/update/{id}")]
-        public async Task<ShelfResponse> updateshelve(ShelfRequest request, int id)
+        public async Task<ShelfResponse> UpdateShelve(ShelfRequest request, int id)
         {
-            var shelve = await patchshelfid(id);
+            var shelve = await PatchShelfId(id);
 
             _mapper.Map(request, shelve);
 
             await _context.SaveChangesAsync();
 
-            return await shelfResponse(shelve.Id);
+            return await ShelfResponse(shelve.Id);
         }
         // [HttpPatch("shelve/hide/{id}")]
-        public async Task<ShelfResponse> removeshelve(int id)
+        public async Task<ShelfResponse> RemoveShelve(int id)
         {
-            var shelve = await patchshelfid(id);
+            var shelve = await PatchShelfId(id);
 
             shelve.Removed = true;
 
             _context.Shelf.Update(shelve);
             await _context.SaveChangesAsync();
 
-            return await shelfResponse(shelve.Id);
+            return await ShelfResponse(shelve.Id);
         }
         // [HttpDelete("shelve/delete/{id}")]
-        public async Task<ShelfResponse> deleteshelve(int id)
+        public async Task<ShelfResponse> DeleteShelve(int id)
         {
-            var shelve = await patchshelfid(id);
+            var shelve = await PatchShelfId(id);
 
             _context.Shelf.Remove(shelve);
             await _context.SaveChangesAsync();
 
-            return await shelfResponse(shelve.Id);
+            return await ShelfResponse(shelve.Id);
         }
         // Helpers
-        private async Task<Shelf?> getshelfid(int id)
+        private async Task<Shelf?> GetShelfId(int id)
         {
             return await _query.getshelfid(id);
         }
-        private async Task<Shelf?> patchshelfid(int id)
+        private async Task<Shelf?> PatchShelfId(int id)
         {
             return await _query.patchshelfid(id);
         }
-        private async Task<ShelfResponse> shelfResponse(int id)
+        private async Task<ShelfResponse> ShelfResponse(int id)
         {
-            var response = await getshelfid(id);
+            var response = await GetShelfId(id);
             return _mapper.Map<ShelfResponse>(response);
         }
     }

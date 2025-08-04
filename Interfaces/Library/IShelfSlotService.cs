@@ -4,11 +4,11 @@ namespace Book_Keep.Interfaces.Library
 {
     public interface IShelfSlotService
     {
-        Task<List<ShelfSlotResponse>> shelfslotslist(string? searchTerm = null);
-        Task<ShelfSlotResponse> getshelfslot(int id);
-        Task<ShelfSlotResponse> createshelfslot(ShelfSlotRequest request);
-        Task<ShelfSlotResponse> updateshelfslot(ShelfSlotRequest request, int id);
-        Task<ShelfSlotResponse> removeshelfslot(int id);
-        Task<ShelfSlotResponse> deleteshelfslot(int id);
+        Task<List<ShelfSlotResponse>> ShelfSlotsList(string? searchTerm = null);
+        Task<ShelfSlotResponse> GetShelfSlot(int id);
+        Task<ShelfSlotResponse> CreateShelfSlot(ShelfSlotRequest request);
+        Task<ShelfSlotResponse> UpdateShelfSlot(ShelfSlotRequest request, int id);
+        Task<ShelfSlotResponse> RemoveShelfSlot(int id);
+        Task<ShelfSlotResponse> DeleteShelfSlot(int id);
     }
 }

@@ -6,16 +6,16 @@ namespace Book_Keep.Interfaces.Canteen
 {
     public interface IProductService
     {
-        Task<Pagination<ProductResponse>> paginatedproducts(
+        Task<Pagination<ProductResponse>> PaginatedProducts(
             int pageNumber = 1,
             int pageSize = 10,
             string? searchTerm = null);
-        Task<List<ProductResponse>> productslist(string? searchTerm = null);
-        Task<ProductResponse> getproduct(int id);
-        Task<ProductResponse> createproduct(ProductRequest request);
-        Task<ProductResponse> updateproduct(ProductRequest request, int id);
-        Task<ProductResponse> togglestatus(int id);
-        Task<ProductResponse> removeproduct(int id);
-        Task<ProductResponse> deleteproduct(int id);
+        Task<List<ProductResponse>> ProductsList(string? searchTerm = null);
+        Task<ProductResponse> GetProduct(int id);
+        Task<ProductResponse> CreateProduct(ProductRequest request);
+        Task<ProductResponse> UpdateProduct(ProductRequest request, int id);
+        Task<ProductResponse> ToggleStatus(int id);
+        Task<ProductResponse> RemoveProduct(int id);
+        Task<ProductResponse> DeleteProduct(int id);
     }
 }

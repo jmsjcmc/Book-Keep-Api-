@@ -16,7 +16,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Fetch all shelves list with optional filter for shelve label
         [HttpGet("shelves/list")]
-        public async Task<ActionResult<List<ShelfResponse>>> shelveslist(string? searchTerm = null)
+        public async Task<ActionResult<List<ShelfResponse>>> ShelvesList(string? searchTerm = null)
         {
             try
             {
@@ -30,7 +30,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Fetch specific shelve
         [HttpGet("shelve/{id}")]
-        public async Task<ActionResult<ShelfResponse>> getshelve(int id)
+        public async Task<ActionResult<ShelfResponse>> GetShelve(int id)
         {
             try
             {
@@ -43,7 +43,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Create new shelve
         [HttpPost("shelve")]
-        public async Task<ActionResult<ShelfResponse>> createshelve([FromBody] ShelfRequest request)
+        public async Task<ActionResult<ShelfResponse>> CreateShelve([FromBody] ShelfRequest request)
         {
             try
             {
@@ -57,7 +57,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Update specific shelve
         [HttpPatch("shelve/update/{id}")]
-        public async Task<ActionResult<ShelfResponse>> updateshelve([FromBody] ShelfRequest request, int id)
+        public async Task<ActionResult<ShelfResponse>> UpdateShelve([FromBody] ShelfRequest request, int id)
         {
             try
             {
@@ -70,7 +70,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Remove specific shelve without removing in database (Soft delete)
         [HttpPatch("shelve/hide/{id}")]
-        public async Task<ActionResult<ShelfResponse>> removeshelve(int id)
+        public async Task<ActionResult<ShelfResponse>> RemoveShelve(int id)
         {
             try
             {
@@ -83,7 +83,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Delete specific shelve in database
         [HttpDelete("shelve/delete/{id}")]
-        public async Task<ActionResult<ShelfResponse>> deleteshelve(int id)
+        public async Task<ActionResult<ShelfResponse>> DeleteShelve(int id)
         {
             try
             {

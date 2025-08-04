@@ -15,7 +15,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Fetch all rooms
         [HttpGet("rooms/list")]
-        public async Task<ActionResult<List<RoomResponse>>> roomslist(string? searchTerm = null)
+        public async Task<ActionResult<List<RoomResponse>>> RoomsList(string? searchTerm = null)
         {
             try
             {
@@ -28,7 +28,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Fetch specific room
         [HttpGet("room/{id}")]
-        public async Task<ActionResult<RoomResponse>> getroom(int id)
+        public async Task<ActionResult<RoomResponse>> GetRoom(int id)
         {
             try
             {
@@ -41,7 +41,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Create new room
         [HttpPost("room")]
-        public async Task<ActionResult<RoomResponse>> createroom([FromBody] RoomRequest request)
+        public async Task<ActionResult<RoomResponse>> CreateRoom([FromBody] RoomRequest request)
         {
             try
             {
@@ -54,7 +54,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Update specific room 
         [HttpPatch("room/update/{id}")]
-        public async Task<ActionResult<RoomResponse>> updateroom([FromBody] RoomRequest request, int id)
+        public async Task<ActionResult<RoomResponse>> UpdateRoom([FromBody] RoomRequest request, int id)
         {
             try
             {
@@ -67,7 +67,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Remove specific room with deleting in database (Soft Delete)
         [HttpPatch("room/hide/{id}")]
-        public async Task<ActionResult<RoomResponse>> removeroom(int id)
+        public async Task<ActionResult<RoomResponse>> RemoveRoom(int id)
         {
             try
             {
@@ -80,7 +80,7 @@ namespace Book_Keep.Controllers.Library
         }
         // Delete specific room from database
         [HttpDelete("room/delete/{id}")]
-        public async Task<ActionResult<RoomResponse>> deleteroom(int id)
+        public async Task<ActionResult<RoomResponse>> DeleteRoom(int id)
         {
             try
             {

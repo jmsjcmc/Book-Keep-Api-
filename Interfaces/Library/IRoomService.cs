@@ -4,11 +4,11 @@ namespace Book_Keep.Interfaces.Library
 {
     public interface IRoomService
     {
-        Task<List<RoomResponse>> roomslist(string? searchTerm = null);
-        Task<RoomResponse> getroom(int id);
-        Task<RoomResponse> createroom(RoomRequest request);
-        Task<RoomResponse> updateroom(RoomRequest request, int id);
-        Task<RoomResponse> removeroom(int id);
-        Task<RoomResponse> deleteroom(int id);
+        Task<List<RoomResponse>> RoomsList(string? searchTerm = null);
+        Task<RoomResponse> GetRoom(int id);
+        Task<RoomResponse> CreateRoom(RoomRequest request);
+        Task<RoomResponse> UpdateRoom(RoomRequest request, int id);
+        Task<RoomResponse> RemoveRoom(int id);
+        Task<RoomResponse> DeleteRoom(int id);
     }
 }
