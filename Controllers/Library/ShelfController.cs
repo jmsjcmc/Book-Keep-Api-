@@ -20,7 +20,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.shelveslist(searchTerm);
+                var response = await _service.ShelvesList(searchTerm);
                 return response;
             }
             catch (Exception e)
@@ -34,7 +34,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.getshelve(id);
+                var response = await _service.GetShelve(id);
                 return response;
             } catch (Exception e)
             {
@@ -47,7 +47,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.createshelve(request);
+                var response = await _service.CreateShelve(request);
                 return response;
             }
             catch (Exception e)
@@ -61,7 +61,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.updateshelve(request, id);
+                var response = await _service.UpdateShelve(request, id);
                 return response;
             } catch (Exception e)
             {
@@ -74,7 +74,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.removeshelve(id);
+                var response = await _service.RemoveShelve(id);
                 return response;
             } catch (Exception e)
             {
@@ -87,7 +87,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.deleteshelve(id);
+                var response = await _service.DeleteShelve(id);
                 return response;
             }
             catch (Exception e)

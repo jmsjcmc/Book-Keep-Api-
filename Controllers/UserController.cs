@@ -23,9 +23,10 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.paginatedusers(pageNumber, pageSize, searchTerm);
+                var response = await _service.PaginatedUsers(pageNumber, pageSize, searchTerm);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -36,9 +37,10 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.userslist(searchTerm);
+                var response = await _service.UsersList(searchTerm);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -49,9 +51,10 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.getuser(id);
+                var response = await _service.GetUser(id);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -62,9 +65,10 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.getuserdetail(User);
+                var response = await _service.GetUserDetail(User);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -75,9 +79,10 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.userlogin(request);
+                var response = await _service.UserLogin(request);
                 return Ok(response);
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -88,9 +93,10 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.createuser(request);
+                var response = await _service.CreateUser(request);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -101,9 +107,10 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.updateuser(request, id);
+                var response = await _service.UpdateUser(request, id);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -114,9 +121,10 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.removeuser(id);
+                var response = await _service.RemoveUser(id);
                 return response;
-            }catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -127,9 +135,10 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.deleteuser(id);
+                var response = await _service.DeleteUser(id);
                 return response;
-            }catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }

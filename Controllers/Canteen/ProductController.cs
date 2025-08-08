@@ -11,7 +11,7 @@ namespace Book_Keep.Controllers.Canteen
     public class ProductController : BaseApiController
     {
         private readonly ProductService _service;
-        public ProductController(AppDbContext context, IMapper mapper, ProductService service) : base (context, mapper)
+        public ProductController(AppDbContext context, IMapper mapper, ProductService service) : base(context, mapper)
         {
             _service = service;
         }
@@ -24,9 +24,10 @@ namespace Book_Keep.Controllers.Canteen
         {
             try
             {
-                var response = await _service.paginatedproducts(pageNumber, pageSize, searchTerm);
+                var response = await _service.PaginatedProducts(pageNumber, pageSize, searchTerm);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -37,9 +38,10 @@ namespace Book_Keep.Controllers.Canteen
         {
             try
             {
-                var response = await _service.productslist(searchTerm);
+                var response = await _service.ProductsList(searchTerm);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -50,9 +52,10 @@ namespace Book_Keep.Controllers.Canteen
         {
             try
             {
-                var response = await _service.getproduct(id);
+                var response = await _service.GetProduct(id);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -63,11 +66,12 @@ namespace Book_Keep.Controllers.Canteen
         {
             try
             {
-                var response = await _service.createproduct(request);
+                var response = await _service.CreateProduct(request);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
-                return HandleException(e);  
+                return HandleException(e);
             }
         }
         // Update specific product
@@ -76,9 +80,10 @@ namespace Book_Keep.Controllers.Canteen
         {
             try
             {
-                var response = await _service.updateproduct(request, id);
+                var response = await _service.UpdateProduct(request, id);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -89,9 +94,10 @@ namespace Book_Keep.Controllers.Canteen
         {
             try
             {
-                var response = await _service.togglestatus(id);
+                var response = await _service.ToggleStatus(id);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -102,9 +108,10 @@ namespace Book_Keep.Controllers.Canteen
         {
             try
             {
-                var response = await _service.removeproduct(id);
+                var response = await _service.RemoveProduct(id);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -115,9 +122,10 @@ namespace Book_Keep.Controllers.Canteen
         {
             try
             {
-                var response = await _service.deleteproduct(id);
+                var response = await _service.DeleteProduct(id);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }

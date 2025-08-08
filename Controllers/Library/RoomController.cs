@@ -19,7 +19,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.roomslist(searchTerm);
+                var response = await _service.RoomsList(searchTerm);
                 return response;
             } catch (Exception e)
             {
@@ -32,7 +32,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.getroom(id);
+                var response = await _service.GetRoom(id);
                 return response;
             } catch (Exception e)
             {
@@ -45,7 +45,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.createroom(request);
+                var response = await _service.CreateRoom(request);
                 return response;
             } catch (Exception e)
             {
@@ -58,7 +58,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.updateroom(request, id);
+                var response = await _service.UpdateRoom(request, id);
                 return response;
             } catch (Exception e)
             {
@@ -71,7 +71,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.removeroom(id);
+                var response = await _service.RemoveRoom(id);
                 return response;
             } catch (Exception e)
             {
@@ -84,7 +84,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.deleteroom(id);
+                var response = await _service.DeleteRoom(id);
                 return response;
             } catch (Exception e)
             {

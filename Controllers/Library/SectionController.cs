@@ -19,7 +19,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.sectionslist(searchTerm);
+                var response = await _service.SectionsList(searchTerm);
                 return response;
             } catch (Exception e)
             {
@@ -32,7 +32,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.getsection(id);
+                var response = await _service.GetSection(id);
                 return response;
             } catch (Exception e)
             {
@@ -45,7 +45,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.createsection(request);
+                var response = await _service.CreateSection(request);
                 return response;
             } catch (Exception e)
             {
@@ -58,7 +58,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.updatesection(request, id);
+                var response = await _service.UpdateSection(request, id);
                 return response;
             } catch (Exception e)
             {
@@ -71,7 +71,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.removesection(id);
+                var response = await _service.RemoveSection(id);
                 return response;
             } catch (Exception e)
             {
@@ -84,7 +84,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.deletesection(id);
+                var response = await _service.DeleteSection(id);
                 return response;
             } catch (Exception e)
             {

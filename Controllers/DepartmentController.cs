@@ -20,7 +20,7 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.departmentslist(searchTerm);
+                var response = await _service.DepartmentsList(searchTerm);
                 return response;
             } catch (Exception e)
             {
@@ -33,7 +33,7 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.getdepartment(id);
+                var response = await _service.GetDepartment(id);
                 return response;
             } catch (Exception e)
             {
@@ -46,7 +46,7 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.createdepartment(request);
+                var response = await _service.CreateDepartment(request);
                 return response;
             } catch (Exception e)
             {
@@ -59,7 +59,7 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.updatedepartment(request, id);
+                var response = await _service.UpdateDepartment(request, id);
                 return response;
             } catch (Exception e)
             {
@@ -72,7 +72,7 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.removedepartment(id);
+                var response = await _service.RemoveDepartment(id);
                 return response;
             }catch (Exception e)
             {
@@ -85,7 +85,7 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.deletedepartment(id);
+                var response = await _service.DeleteDepartment(id);
                 return response;
             } catch (Exception e)
             {

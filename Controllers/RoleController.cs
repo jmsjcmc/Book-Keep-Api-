@@ -9,7 +9,7 @@ namespace Book_Keep.Controllers
     public class RoleController : BaseApiController
     {
         private readonly RoleService _service;
-        public RoleController(RoleService service, AppDbContext context, IMapper mapper) : base (context, mapper)
+        public RoleController(RoleService service, AppDbContext context, IMapper mapper) : base(context, mapper)
         {
             _service = service;
         }
@@ -19,9 +19,10 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.roleslist(searchTerm);
+                var response = await _service.RolesList(searchTerm);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -32,9 +33,10 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.getrole(id);
+                var response = await _service.GetRole(id);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -45,9 +47,10 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.createrole(request);
+                var response = await _service.CreateRole(request);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -58,9 +61,10 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.updaterole(request, id);
+                var response = await _service.UpdateRole(request, id);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -71,22 +75,24 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                 var response = await _service.togglestatus(id);
-                 return response;
-            } catch (Exception e)
+                var response = await _service.ToggleStatus(id);
+                return response;
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
         }
         // Remove specific role without deleting in database 
         [HttpPatch("role/hide/{id}")]
-        public async Task<ActionResult<RoleResponse>>  RemoveRole(int id)
+        public async Task<ActionResult<RoleResponse>> RemoveRole(int id)
         {
             try
             {
-                var response = await _service.removerole(id);
+                var response = await _service.RemoveRole(id);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return HandleException(e);
             }
@@ -97,11 +103,12 @@ namespace Book_Keep.Controllers
         {
             try
             {
-                var response = await _service.deleterole(id);
+                var response = await _service.DeleteRole(id);
                 return response;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
-                return HandleException(e) ;
+                return HandleException(e);
             }
         }
     }

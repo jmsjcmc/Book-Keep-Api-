@@ -20,7 +20,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.shelfslotslist(searchTerm);
+                var response = await _service.ShelfSlotsList(searchTerm);
                 return response;
             } catch (Exception e)
             {
@@ -33,7 +33,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.getshelfslot(id);
+                var response = await _service.GetShelfSlot(id);
                 return response;
             } catch (Exception e)
             {
@@ -46,7 +46,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.createshelfslot(request);
+                var response = await _service.CreateShelfSlot(request);
                 return response;
             } catch (Exception e)
             {
@@ -59,7 +59,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.updateshelfslot(request, id);
+                var response = await _service.UpdateShelfSlot(request, id);
                 return response;
             } catch (Exception e)
             {
@@ -72,7 +72,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.removeshelfslot(id);
+                var response = await _service.RemoveShelfSlot(id);
                 return response;
             } catch (Exception e)
             {
@@ -85,7 +85,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _service.deleteshelfslot(id);
+                var response = await _service.DeleteShelfSlot(id);
                 return response;
             } catch (Exception e)
             {

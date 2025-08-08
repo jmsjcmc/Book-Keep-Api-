@@ -58,7 +58,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _bookService.paginatedbooks(pageNumber, pageSize, searchTerm);
+                var response = await _bookService.PaginatedBooks(pageNumber, pageSize, searchTerm);
                 return response;
 
             }catch (Exception e)
@@ -72,7 +72,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _bookService.getbook(id);
+                var response = await _bookService.GetBook(id);
                 return response;
             } catch (Exception e)
             {
@@ -102,7 +102,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _bookService.createbook(request);
+                var response = await _bookService.CreateBook(request);
                 return response;
             }
             catch (Exception e)
@@ -116,7 +116,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _bookService.updatebook(request, id);
+                var response = await _bookService.UpdateBook(request, id);
                 return response;
             } catch (Exception e)
             {
@@ -129,7 +129,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _bookService.togglehide(id);
+                var response = await _bookService.ToggleHide(id);
                 return response;
             }catch (Exception e)
             {
@@ -142,7 +142,7 @@ namespace Book_Keep.Controllers.Library
         {
             try
             {
-                var response = await _bookService.deletebook(id);
+                var response = await _bookService.DeleteBook(id);
                 return response;
             } catch (Exception e)
             {
